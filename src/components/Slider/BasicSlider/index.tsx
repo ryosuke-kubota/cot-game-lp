@@ -28,6 +28,10 @@ export default function BasicSlider() {
           speed={1000} // スライドが切り替わる時の速度
           loopAdditionalSlides={1}
           watchSlidesProgress={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
           pagination={{
             el: '.swiper-pagination',
           }} // ページネーション, クリックで対象のスライドに切り替わる
