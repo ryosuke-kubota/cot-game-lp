@@ -1,0 +1,36 @@
+.sns-btns {
+  .sns-btn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background: linear-gradient(to bottom, #2fa2fb, #8116f4) border-box;
+
+      // FireFox
+      mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      mask-clip: padding-box, border-box;
+      mask-composite: exclude;
+
+      // それ以外の主要ブラウザ
+      -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      -webkit-mask-clip: padding-box, border-box;
+      -webkit-mask-composite: destination-out;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

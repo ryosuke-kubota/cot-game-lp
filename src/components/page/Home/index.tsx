@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import BasicSlider from '@/components/Slider/BasicSlider';
@@ -9,7 +10,7 @@ export default function Home() {
       <main>
         <Hero />
         <BasicSlider />
-        <div>About</div>
+        <About />
         <div>KISARABI</div>
         <div>QB QUEST</div>
         <div>QB STUTS</div>

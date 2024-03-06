@@ -1,5 +1,6 @@
 import { Righteous } from 'next/font/google';
 const righteous = Righteous({ weight: ['400'], subsets: ['latin'] });
+import './style.scss';
 
 interface RighteousTextProps {
   tag: keyof JSX.IntrinsicElements;
