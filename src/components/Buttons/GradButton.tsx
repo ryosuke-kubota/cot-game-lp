@@ -1,9 +1,15 @@
 import styles from './style.module.scss';
 
-export default function GradButton() {
-  return (
-    <a href="#" className={`${styles.btnGrad} py-3`}>
-      QB QUEST
-    </a>
-  );
+interface ButtonProps {
+  link: string;
+  text: string;
+  className?: string;
 }
+
+const GradButton: React.FC<ButtonProps> = ({ link, text, className }) => (
+  <a href={link} className={`${styles.btnGrad} py-3 ${className}`}>
+    {text}
+  </a>
+);
+
+export default GradButton;

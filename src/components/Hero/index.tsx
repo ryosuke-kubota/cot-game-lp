@@ -21,7 +21,7 @@ export default function Hero() {
           the seamless transition to web 3.0 and the challenges of the new era.
         </p>
         <div className="flex justify-start space-x-4">
-          <GradButton />
+          <GradButton link="#" text="QB QUEST" />
           <BorderButton />
         </div>
       </div>
