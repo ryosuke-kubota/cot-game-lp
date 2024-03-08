@@ -1,0 +1,71 @@
+#stuts {
+  h2 {
+    bottom: -25px;
+    left: -120px;
+    transform: scale(0.6);
+  }
+  .stuts-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding: 30px;
+    padding-left: 280px;
+    padding-right: 60px;
+    min-height: 200px;
+    background-color: #000;
+    border-radius: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      background: linear-gradient(to bottom, #2fa2fb, #8116f4) border-box;
+
+      // FireFox
+      mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      mask-clip: padding-box, border-box;
+      mask-composite: exclude;
+
+      // それ以外の主要ブラウザ
+      -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      -webkit-mask-clip: padding-box, border-box;
+      -webkit-mask-composite: destination-out;
+    }
+    .stuts-image {
+      width: 250px;
+      position: absolute;
+      left: 60px;
+      bottom: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    .stuts-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .stuts-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+
+        .number {
+          font-weight: bold;
+          font-size: 54px;
+          color: transparent;
+          background: linear-gradient(90deg, #8116f4, #2fa2fb);
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    }
+  }
+}
