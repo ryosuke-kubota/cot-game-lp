@@ -7,9 +7,19 @@
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  min-width: 200px;
   text-align: center;
   font-weight: bold;
+
+  a {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: skew(15deg);
+    transform: skew(15deg);
+  }
 
   &:hover {
     -webkit-transform: skew(0);
@@ -17,6 +27,11 @@
     color: #fff;
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+
+    a {
+      -webkit-transform: skew(0deg);
+      transform: skew(0deg);
+    }
   }
 }
 

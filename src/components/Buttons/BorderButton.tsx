@@ -1,9 +1,17 @@
 import styles from './style.module.scss';
 
-export default function BorderButton() {
-  return (
-    <a href="#" className={`${styles.btnBorder} py-3`}>
-      BLOCKCHAIN GAME
-    </a>
-  );
+interface ButtonProps {
+  link: string;
+  children: React.ReactNode;
+  className?: string;
 }
+
+const BorderButton: React.FC<ButtonProps> = ({ link, children, className }) => (
+  <div className={`${styles.btnBorder}`}>
+    <a href={link} className={`py-3 ${className}`}>
+      {children}
+    </a>
+  </div>
+);
+
+export default BorderButton;

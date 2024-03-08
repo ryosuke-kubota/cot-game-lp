@@ -2,14 +2,16 @@ import styles from './style.module.scss';
 
 interface ButtonProps {
   link: string;
-  text: string;
+  children: React.ReactNode;
   className?: string;
 }
 
-const GradButton: React.FC<ButtonProps> = ({ link, text, className }) => (
-  <a href={link} className={`${styles.btnGrad} py-3 ${className}`}>
-    {text}
-  </a>
+const GradButton: React.FC<ButtonProps> = ({ link, children, className }) => (
+  <div className={`${styles.btnGrad}`}>
+    <a href={link} className={`py-3 ${className}`}>
+      {children}
+    </a>
+  </div>
 );
 
 export default GradButton;

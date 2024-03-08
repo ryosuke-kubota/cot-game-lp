@@ -18,7 +18,9 @@ export default function JoinDiscord() {
           ブロックチェーンゲームの最新情報を今すぐチェック！
         </p>
 
-        <GradButton link="#" text="JOIN DISCORD" className="join-discord-btn" />
+        <GradButton link="#" className="join-discord-btn">
+          JOIN DISCORD
+        </GradButton>
       </div>
     </section>
   );
