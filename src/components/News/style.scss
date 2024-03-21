@@ -1,0 +1,11 @@
+#news {
+  .border-btn {
+    width: fit-content;
+    margin: 60px auto;
+    a::after {
+      content: '▶︎';
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+}

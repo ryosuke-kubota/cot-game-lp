@@ -9,7 +9,7 @@ export default function Quest() {
     <section id="quest">
       <div className="inner text-center py-20 px-4">
         <RighteousText tag="h2" className="text-5xl font-bold mb-12">
-          QB Quest
+          QB QUEST
         </RighteousText>
         <p className="mb-12">
           誰でも参加できる招待制のイベントです。

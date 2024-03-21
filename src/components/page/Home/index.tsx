@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import JoinDiscord from '@/components/JoinDiscord';
 import Kisaragi from '@/components/Kisaragi';
+import News from '@/components/News';
 import Quest from '@/components/Quest';
 import BasicSlider from '@/components/Slider/BasicSlider';
 import Solutions from '@/components/Solutions';
@@ -21,7 +22,7 @@ export default function Home() {
         <Quest />
         <Stuts />
         <Solutions />
-        <div>QB NEWS</div>
+        <News />
         <div>QB GAMES</div>
         <div>Top Blockchain Games</div>
         <div>Roadmap</div>
