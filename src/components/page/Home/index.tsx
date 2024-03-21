@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import JoinDiscord from '@/components/JoinDiscord';
 import Kisaragi from '@/components/Kisaragi';
+import Quest from '@/components/Quest';
 import BasicSlider from '@/components/Slider/BasicSlider';
 import Solutions from '@/components/Solutions';
 import Stuts from '@/components/Stuts';
@@ -17,7 +18,7 @@ export default function Home() {
         <BasicSlider />
         <About />
         <Kisaragi />
-        <div>QB QUEST</div>
+        <Quest />
         <Stuts />
         <Solutions />
         <div>QB NEWS</div>
