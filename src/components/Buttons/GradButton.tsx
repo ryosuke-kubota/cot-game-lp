@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 const GradButton: React.FC<ButtonProps> = ({ link, children, className }) => (
-  <div className={`${styles.btnGrad}`}>
+  <div className={`grad-btn ${styles.btnGrad}`}>
     <a href={link} className={`py-3 ${className}`}>
       {children}
     </a>

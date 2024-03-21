@@ -24,4 +24,18 @@
       -webkit-mask-composite: destination-out;
     }
   }
+
+  .border-btn {
+    width: fit-content;
+    margin: 50px auto;
+    a::after {
+      content: '▶︎';
+      font-size: 12px;
+      margin-left: 10px;
+      // position: absolute;
+      // right: 10%;
+      // top: 50%;
+      // transform: translateY(-50%);
+    }
+  }
 }

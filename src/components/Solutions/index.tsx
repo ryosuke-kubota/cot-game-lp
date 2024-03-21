@@ -1,6 +1,7 @@
 import './style.scss';
 import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
+import BorderButton from '../Buttons/BorderButton';
 
 export default function Solutions() {
   return (
@@ -146,6 +147,10 @@ export default function Solutions() {
             </p>
           </div>
         </div>
+
+        <BorderButton link="#" className="x-btn py-1">
+          View All
+        </BorderButton>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 
 const BorderButton: React.FC<ButtonProps> = ({ link, children, className }) => (
-  <div className={`${styles.btnBorder}`}>
+  <div className={`border-btn ${styles.btnBorder}`}>
     <a href={link} className={`py-3 ${className}`}>
       {children}
     </a>
