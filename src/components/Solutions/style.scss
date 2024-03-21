@@ -1,0 +1,27 @@
+#solutions {
+  .solution {
+    position: relative;
+    padding: 20px 10px;
+    background-color: rgba(#fff, 0.1);
+    border-radius: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      border: 2px solid transparent;
+      background: linear-gradient(to bottom, #2fa2fb, #8116f4) border-box;
+
+      // FireFox
+      mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      mask-clip: padding-box, border-box;
+      mask-composite: exclude;
+
+      // それ以外の主要ブラウザ
+      -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+      -webkit-mask-clip: padding-box, border-box;
+      -webkit-mask-composite: destination-out;
+    }
+  }
+}
