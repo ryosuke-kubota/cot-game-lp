@@ -48,9 +48,9 @@ export default function BasicSlider() {
                   <Image
                     src={src}
                     // width={1920}
-                    layout={'fill'}
+                    fill
                     alt="Slider Image"
-                    objectFit={'contain'}
+                    style={{ objectFit: 'contain' }}
                     // sizes="(min-width: 1024px) 100vw, 60vw"
                     // className={styles.slideImage}
                   />

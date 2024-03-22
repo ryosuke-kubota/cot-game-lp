@@ -49,7 +49,7 @@ export default function SquereSlider() {
                   width={1920}
                   height={1440}
                   alt="Slider Image"
-                  objectFit={'cover'}
+                  // objectFit={'cover'}
                   // sizes="(min-width: 1024px) 100vw, 60vw"
                   // className={styles.slideImage}
                 />

@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import JoinDiscord from '@/components/JoinDiscord';
 import Kisaragi from '@/components/Kisaragi';
 import News from '@/components/News';
+import Partners from '@/components/Partners';
 import Quest from '@/components/Quest';
 import BasicSlider from '@/components/Slider/BasicSlider';
 import Solutions from '@/components/Solutions';
@@ -26,7 +27,7 @@ export default function Home() {
         <div>QB GAMES</div>
         <div>Top Blockchain Games</div>
         <div>Roadmap</div>
-        <div>QB Partners</div>
+        <Partners />
 
         <JoinDiscord />
       </main>
