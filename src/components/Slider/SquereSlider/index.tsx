@@ -25,6 +25,7 @@ export default function SquereSlider() {
         spaceBetween={0}
         loop={true} // スライドをループさせる
         speed={1000} // スライドが切り替わる時の速度
+        centeredSlides={true}
         loopAdditionalSlides={1}
         watchSlidesProgress={true}
         // autoplay={{
