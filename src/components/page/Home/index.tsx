@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import Footer from '@/components/Footer';
+import Games from '@/components/Games';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import JoinDiscord from '@/components/JoinDiscord';
@@ -24,7 +25,7 @@ export default function Home() {
         <Stuts />
         <Solutions />
         <News />
-        <div>QB GAMES</div>
+        <Games />
         <div>Top Blockchain Games</div>
         <div>Roadmap</div>
         <Partners />
