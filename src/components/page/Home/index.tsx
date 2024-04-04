@@ -8,6 +8,7 @@ import Kisaragi from '@/components/Kisaragi';
 import News from '@/components/News';
 import Partners from '@/components/Partners';
 import Quest from '@/components/Quest';
+import Roadmap from '@/components/Roadmap';
 import BasicSlider from '@/components/Slider/BasicSlider';
 import Solutions from '@/components/Solutions';
 import Stuts from '@/components/Stuts';
@@ -27,7 +28,7 @@ export default function Home() {
         <News />
         <Games />
         <div>Top Blockchain Games</div>
-        <div>Roadmap</div>
+        <Roadmap />
         <Partners />
 
         <JoinDiscord />

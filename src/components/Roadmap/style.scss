@@ -1,0 +1,71 @@
+#roadmap {
+  .roadmap-list {
+    .roadmap-item {
+      $itemTop: 50px;
+      &-1 {
+        margin-top: $itemTop * 4;
+        .roadmap-item-title-label {
+          color: #7261f8;
+        }
+      }
+      &-2 {
+        margin-top: $itemTop * 3;
+        .roadmap-item-title-label {
+          color: #8028f5;
+        }
+      }
+      &-3 {
+        margin-top: $itemTop * 2;
+        .roadmap-item-title-label {
+          color: #5e6be3;
+        }
+      }
+      &-4 {
+        margin-top: $itemTop * 1;
+        .roadmap-item-title-label {
+          color: #4895fa;
+        }
+      }
+
+      .roadmap-item-title {
+        border-bottom: 1px solid #fff;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        .roadmap-item-title-number {
+          font-size: 64px;
+          font-weight: bold;
+          line-height: 1;
+          margin-right: 10px;
+        }
+        .roadmap-item-title-label {
+          font-size: 28px;
+          line-height: 1;
+          margin-bottom: 5px;
+        }
+        .roadmap-item-title-sub {
+          font-size: 12px;
+          line-height: 1;
+          color: #999;
+        }
+      }
+      .roadmap-item-content {
+        ul {
+          padding-left: 25px;
+          li {
+            text-align: left;
+            list-style: square;
+            font-size: 14px;
+            line-height: 1.2;
+            &::marker {
+              font-size: 30px;
+            }
+            span {
+              vertical-align: 4px;
+              margin-left: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
