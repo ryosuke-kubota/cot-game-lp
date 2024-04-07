@@ -8,6 +8,10 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['dashboard-assets.dappradar.com'],
+  },
+  reactStrictMode: false,
 };
 
 export default nextConfig;
