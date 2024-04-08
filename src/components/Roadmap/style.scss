@@ -1,27 +1,30 @@
 #roadmap {
+  .roadmap-img {
+    width: 100%;
+  }
   .roadmap-list {
     .roadmap-item {
       $itemTop: 50px;
       &-1 {
-        margin-top: $itemTop * 4;
+        margin-top: $itemTop * 4 - 100px;
         .roadmap-item-title-label {
           color: #7261f8;
         }
       }
       &-2 {
-        margin-top: $itemTop * 3;
+        margin-top: $itemTop * 3 - 100px;
         .roadmap-item-title-label {
           color: #8028f5;
         }
       }
       &-3 {
-        margin-top: $itemTop * 2;
+        margin-top: $itemTop * 2 - 100px;
         .roadmap-item-title-label {
           color: #5e6be3;
         }
       }
       &-4 {
-        margin-top: $itemTop * 1;
+        margin-top: $itemTop * 1 - 100px;
         .roadmap-item-title-label {
           color: #4895fa;
         }

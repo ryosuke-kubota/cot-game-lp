@@ -11,11 +11,20 @@ export default function Roadmap() {
         <RighteousText tag="h2" className="text-5xl font-bold mb-12">
           Roadmap
         </RighteousText>
-        <p className="mb-16">
+        <p className="">
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ
           <br />
           キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
         </p>
+        <div className="w-full">
+          <Image
+            className="roadmap-img"
+            src={'/assets/images/roadmap.png'}
+            width={'369'}
+            height={'1422'}
+            alt={'Roadmap'}
+          ></Image>
+        </div>
         <div className="roadmap-list flex gap-20">
           <div className="roadmap-item roadmap-item-1 w-1/4">
             <div className="roadmap-item-title flex justify-start items-center">
