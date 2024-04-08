@@ -229,7 +229,15 @@ export default function TopGamesTable() {
                 ></Image>
               </td>
               <td className="px-6 py-4">
-                <div className="mb-2 font-bold">{game.name}</div>
+                <div className="mb-2 font-bold">
+                  <a
+                    href={game.website}
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    {game.name}
+                  </a>
+                </div>
                 <div className="text-xs text-gray-400">
                   {game.chains.join(', ')}
                 </div>
