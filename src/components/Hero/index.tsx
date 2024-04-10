@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap-trial';
+import gsap from 'gsap';
 import SplitText from 'gsap-trial/SplitText';
 import Image from 'next/image';
 import BorderButton from '../Buttons/BorderButton';
