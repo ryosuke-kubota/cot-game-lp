@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  visibility: hidden;
 
   .left {
     h1 {
@@ -12,6 +13,7 @@
       background: linear-gradient(135deg, #a7a4a4, #fff);
       -webkit-background-clip: text;
       background-clip: text;
+      // scale: 1;
       span {
         color: transparent;
         background: linear-gradient(135deg, #8116f4, #2fa2fb);
