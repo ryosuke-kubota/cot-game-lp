@@ -10,9 +10,9 @@ import Partners from '@/components/Partners';
 import Quest from '@/components/Quest';
 import Ranking from '@/components/Ranking';
 import Roadmap from '@/components/Roadmap';
-import BasicSlider from '@/components/Slider/BasicSlider';
 import Solutions from '@/components/Solutions';
 import Stuts from '@/components/Stuts';
+import Topics from '@/components/Topics';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <BasicSlider />
+        <Topics />
         <About />
         <Kisaragi />
         <Quest />
