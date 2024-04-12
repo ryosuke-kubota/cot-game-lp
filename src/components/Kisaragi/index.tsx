@@ -3,7 +3,6 @@ import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
 import { useRef } from 'react';
 import gsap from 'gsap';
-import SplitText from 'gsap-trial/SplitText';
 import { useGSAP } from '@gsap/react';
 
 export default function Kisaragi() {
@@ -60,7 +59,7 @@ export default function Kisaragi() {
         {
           xPercent: 100,
           ease: 'Power2.out',
-          delay: 0.3,
+          delay: 0.2,
         },
         'same'
       )
@@ -69,7 +68,7 @@ export default function Kisaragi() {
         {
           xPercent: -100,
           scale: 1.3,
-          delay: 0.3,
+          delay: 0.2,
           ease: 'Power2.out',
         },
         'same'
