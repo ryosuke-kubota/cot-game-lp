@@ -23,7 +23,7 @@ export default function Solutions() {
     tl.from(solutionsListRef.current?.children, {
       duration: 0.3,
       scale: 0,
-      delay: 0.5,
+      delay: 0.2,
       stagger: 0.125,
     });
   }, [solutionsRef, solutionsListRef]);
