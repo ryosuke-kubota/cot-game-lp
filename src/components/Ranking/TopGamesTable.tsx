@@ -184,7 +184,7 @@ export default function TopGamesTable() {
       </div>
       <table
         id="top-games-table"
-        className="w-full text-sm text-left text-white"
+        className="w-full text-sm text-left text-white min-h-[800px]"
       >
         <thead className="text-xs uppercase bg-gray-700 text-gray-400">
           <tr>
