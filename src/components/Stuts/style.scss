@@ -64,6 +64,10 @@
           background: linear-gradient(90deg, #8116f4, #2fa2fb);
           -webkit-background-clip: text;
           background-clip: text;
+          min-width: 140px;
+          &-2 {
+            min-width: 113px;
+          }
         }
       }
     }
