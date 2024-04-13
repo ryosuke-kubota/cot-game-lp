@@ -2,10 +2,34 @@ import './style.scss';
 import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
 import BorderButton from '../Buttons/BorderButton';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Solutions() {
+  const solutionsRef = useRef<HTMLDivElement>(null);
+  const solutionsListRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: solutionsRef.current,
+        start: 'top-=100 center',
+        once: true,
+        markers: false,
+      },
+    });
+
+    tl.from(solutionsListRef.current?.children, {
+      duration: 0.3,
+      scale: 0,
+      delay: 0.5,
+      stagger: 0.125,
+    });
+  }, [solutionsRef, solutionsListRef]);
+
   return (
-    <section id="solutions">
+    <section id="solutions" ref={solutionsRef}>
       <div className="inner text-center py-20 px-4">
         <RighteousText tag="h2" className="text-5xl font-bold mb-12">
           QB SOLUTIONS
@@ -15,7 +39,10 @@ export default function Solutions() {
           <br />
           NFTゲームプレイヤーのコミュニティであるGuildQBがリリースするBFTです。
         </p>
-        <div className="flex flex-wrap flex-row items-center justify-center gap-2 gap-y-12">
+        <div
+          className="flex flex-wrap flex-row items-center justify-center gap-2 gap-y-12"
+          ref={solutionsListRef}
+        >
           <div className="solution w-1/6 flex flex-col items-center justify-center">
             <Image
               className="kisaragi-img"
