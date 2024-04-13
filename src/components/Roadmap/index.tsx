@@ -1,22 +1,107 @@
 import './style.scss';
 import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
-import BorderButton from '../Buttons/BorderButton';
-import ImageSlider from '../Slider/ImageSlider';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Roadmap() {
+  const roadmapRef = useRef<HTMLDivElement>(null);
+  const roadmapTitleRef = useRef<HTMLDivElement>(null);
+  const roadmapTextRef = useRef<HTMLDivElement>(null);
+  const roadmapImageRef = useRef<HTMLDivElement>(null);
+  const roadmapListRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: roadmapRef.current,
+        start: 'top center',
+        once: true,
+        markers: false,
+      },
+    });
+
+    tl.from(
+      roadmapTitleRef.current,
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        delay: 0.1,
+        ease: 'power2.out',
+      },
+      'same'
+    )
+      .from(
+        roadmapTextRef.current,
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+          delay: 0.2,
+          ease: 'power2.out',
+        },
+        'same'
+      )
+      .set(roadmapImageRef.current, { autoAlpha: 1 })
+      .from(
+        roadmapImageRef.current,
+        {
+          xPercent: -100,
+          duration: 2,
+          ease: 'Power2.out',
+          delay: 0.3,
+        },
+        'same'
+      )
+      .from(
+        roadmapImageRef.current?.children[0],
+        {
+          xPercent: 100,
+          duration: 2,
+          delay: 0.3,
+          ease: 'Power2.out',
+        },
+        'same'
+      )
+      .from(
+        roadmapListRef.current?.children,
+        {
+          duration: 0.5,
+          y: 50,
+          opacity: 0,
+          delay: 0.3,
+          stagger: 0.5,
+        },
+        'same'
+      );
+  }, [
+    roadmapRef,
+    roadmapTitleRef,
+    roadmapTextRef,
+    roadmapImageRef,
+    roadmapListRef,
+  ]);
   return (
-    <section id="roadmap">
+    <section id="roadmap" ref={roadmapRef}>
       <div className="inner text-center py-20 px-12">
-        <RighteousText tag="h2" className="text-5xl font-bold mb-12">
+        <RighteousText
+          tag="h2"
+          className="text-5xl font-bold mb-12"
+          ref={roadmapTitleRef}
+        >
           Roadmap
         </RighteousText>
-        <p className="">
+        <p className="" ref={roadmapTextRef}>
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ
           <br />
           キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
         </p>
-        <div className="w-full">
+        <div
+          className="w-[80%] m-auto overflow-hidden invisible"
+          ref={roadmapImageRef}
+        >
           <Image
             className="roadmap-img"
             src={'/assets/images/roadmap.png'}
@@ -25,7 +110,7 @@ export default function Roadmap() {
             alt={'Roadmap'}
           ></Image>
         </div>
-        <div className="roadmap-list flex gap-20">
+        <div className="roadmap-list flex gap-20" ref={roadmapListRef}>
           <div className="roadmap-item roadmap-item-1 w-1/4">
             <div className="roadmap-item-title flex justify-start items-center">
               <RighteousText tag="div" className="roadmap-item-title-number">
