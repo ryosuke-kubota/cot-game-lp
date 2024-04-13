@@ -3,20 +3,90 @@ import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
 import BorderButton from '../Buttons/BorderButton';
 import ImageSlider from '../Slider/ImageSlider';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Games() {
+  const gamesRef = useRef<HTMLDivElement>(null);
+  const gamesTitleRef = useRef<HTMLDivElement>(null);
+  const gamesTextRef = useRef<HTMLDivElement>(null);
+  const gamesListRef = useRef<HTMLDivElement>(null);
+  const gamesSlideRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: gamesRef.current,
+        start: 'top-=100 center',
+        once: true,
+        markers: false,
+      },
+    });
+
+    tl.from(
+      gamesTitleRef.current,
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        delay: 0.1,
+        ease: 'power2.out',
+      },
+      'same'
+    )
+      .from(
+        gamesTextRef.current,
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+          delay: 0.2,
+          ease: 'power2.out',
+        },
+        'same'
+      )
+      .from(
+        gamesListRef.current?.children,
+        {
+          duration: 0.3,
+          scale: 0,
+          delay: 0.3,
+          stagger: 0.125,
+        },
+        'same'
+      )
+      .from(
+        gamesSlideRef.current,
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+          delay: 0.4,
+          ease: 'power2.out',
+        },
+        'same'
+      );
+  }, [gamesRef, gamesTitleRef, gamesTextRef, gamesListRef, gamesSlideRef]);
+
   return (
-    <section id="games">
+    <section id="games" ref={gamesRef}>
       <div className="inner text-center py-20 px-4">
-        <RighteousText tag="h2" className="text-5xl font-bold mb-12">
+        <RighteousText
+          tag="h2"
+          className="text-5xl font-bold mb-12"
+          ref={gamesTitleRef}
+        >
           QB GAMES
         </RighteousText>
-        <p className="mb-16">
+        <p className="mb-16" ref={gamesTextRef}>
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ
           <br />
           キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
         </p>
-        <div className="game-list flex items-center justify-center gap-5 gap-y-12 mb-16">
+        <div
+          className="game-list flex items-center justify-center gap-5 gap-y-12 mb-16"
+          ref={gamesListRef}
+        >
           <div className="game w-1/4 flex flex-col items-center justify-center">
             <Image
               src={'/assets/images/games-img01.png'}
@@ -63,7 +133,9 @@ export default function Games() {
           </div>
         </div>
 
-        <ImageSlider />
+        <div ref={gamesSlideRef}>
+          <ImageSlider />
+        </div>
       </div>
     </section>
   );
