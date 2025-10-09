@@ -60,7 +60,7 @@ export default function SquereSlider() {
                     🎉1500ドルの #Giveaway キャンペーン🎉
                   </h5>
                   <p className="mb-3 font-normal text-white">
-                    QuestNを活用して、GuildQBからGWへのプレゼント!!
+                    QuestNを活用して、Cosplay TokenからGWへのプレゼント!!
                   </p>
                 </div>
               </div>

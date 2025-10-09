@@ -127,7 +127,7 @@ export default function Roadmap() {
               <ul>
                 <li>
                   <span>
-                    GuildQBコミュニティがソーシャルクリエーションを開始
+                    Cosplay Tokenコミュニティがソーシャルクリエーションを開始
                   </span>
                 </li>
                 <li>
@@ -244,10 +244,10 @@ export default function Roadmap() {
                   <span>マルチチェーン対応</span>
                 </li>
                 <li>
-                  <span>GuildQB NFTFi</span>
+                  <span>Cosplay Token NFTFi</span>
                 </li>
                 <li>
-                  <span>GuildQB Ventures</span>
+                  <span>Cosplay Token Ventures</span>
                 </li>
               </ul>
             </div>

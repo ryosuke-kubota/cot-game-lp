@@ -8,14 +8,8 @@ export default function Header() {
       id="header"
       className="mx-auto px-4 flex justify-between items-center py-2 fixed w-full"
     >
-      <div className="text-purple-500 font-bold text-xl">
-        <Image
-          src="/assets/images/logo.png"
-          alt="GuildQB"
-          className="logo"
-          width={140}
-          height={30}
-        />
+      <div className="text-whtie font-bold text-xl">
+        <h1>Cosplay Battles</h1>
       </div>
       <div className="flex items-center items-center space-x-4">
         <BorderButton link="#" className="discord-btn py-1 flex">
@@ -24,7 +18,7 @@ export default function Header() {
         </BorderButton>
         <BorderButton link="#" className="x-btn py-1">
           <Twitter className="x-icon" />
-          @GuildQB
+          @cosplaytoken
         </BorderButton>
       </div>
     </header>

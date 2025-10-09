@@ -37,7 +37,7 @@ export default function Solutions() {
         <p className="mb-12">
           「KISARAGI」は、NFTゲームに特化したソーシャルWeb3プラットフォームであり、
           <br />
-          NFTゲームプレイヤーのコミュニティであるGuildQBがリリースするBFTです。
+          NFTゲームプレイヤーのコミュニティであるCosplay TokenがリリースするBFTです。
         </p>
         <div
           className="flex flex-wrap flex-row items-center justify-center gap-2 gap-y-12"

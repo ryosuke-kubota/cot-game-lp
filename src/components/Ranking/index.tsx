@@ -50,12 +50,12 @@ export default function Ranking() {
           className="text-5xl font-bold mb-12"
           ref={rankingTitleRef}
         >
-          Top Blockchain Games
+          LEADERBOARD
         </RighteousText>
         <p className="mb-16" ref={rankingTextRef}>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ
+          COTゲームのトッププレイヤーランキング
           <br />
-          キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          ランキング上位者には特別な報酬が用意されています
         </p>
 
         <TopGamesTable />

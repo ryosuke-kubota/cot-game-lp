@@ -1,5 +1,7 @@
 import About from '@/components/About';
+import Cosplayers from '@/components/Cosplayers';
 import Footer from '@/components/Footer';
+import GameRules from '@/components/GameRules';
 import Games from '@/components/Games';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -20,16 +22,18 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Topics />
+        {/* <Topics /> */}
         <About />
-        <Kisaragi />
+        <GameRules />
+        {/* <Kisaragi /> */}
+        <Cosplayers />
         <Quest />
         <Stuts />
-        <Solutions />
-        <News />
-        <Games />
+        {/* <Solutions /> */}
+        {/* <News /> */}
+        {/* <Games /> */}
         <Ranking />
-        <Roadmap />
+        {/* <Roadmap /> */}
         <Partners />
 
         <JoinDiscord />

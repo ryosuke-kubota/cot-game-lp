@@ -1,8 +1,25 @@
 #about {
-  background-image: url('/assets/images/bg/about-bg.jpg');
+  position: relative;
+  background-image: url('/assets/images/bg/about-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
 
   p {
     line-height: 1.8;

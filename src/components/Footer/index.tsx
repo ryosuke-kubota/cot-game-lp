@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="mb-10">
             <Image
               src="/assets/images/logo.png"
-              alt="GuildQB"
+              alt="Cosplay Token"
               className="logo mb-4"
               width={140}
               height={30}

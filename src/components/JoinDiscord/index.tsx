@@ -17,7 +17,7 @@ export default function JoinDiscord() {
         trigger: joinDiscordRef.current,
         start: 'top-=100 center',
         once: true,
-        markers: true,
+        markers: false,
       },
     });
 
@@ -68,20 +68,35 @@ export default function JoinDiscord() {
           className="text-5xl font-bold mb-12"
           ref={joinDiscordTitleRef}
         >
-          QB COMMUNITY
+          JOIN OUR COMMUNITY
         </RighteousText>
 
         <p className="mb-12" ref={joinDiscordTextRef}>
-          GuildQBのコミュニティに参加することで、
+          COTゲームの最新情報やイベント情報をSNSでチェック！
           <br />
-          様々なブロックチェーンゲームのはじめ方や攻略法を共有する仲間を見つけることができます。
-          <br />
-          ブロックチェーンゲームの最新情報を今すぐチェック！
+          コミュニティに参加して、他のプレイヤーと交流しよう
         </p>
-        <div ref={joinDiscordButtonRef}>
-          <GradButton link="#" className="join-discord-btn">
-            JOIN DISCORD
-          </GradButton>
+        <div ref={joinDiscordButtonRef} className="flex flex-col items-center gap-8">
+          <div className="flex gap-6">
+            <GradButton link="#" className="join-discord-btn">
+              <i className="fab fa-discord mr-2"></i>
+              DISCORD
+            </GradButton>
+            <GradButton link="#" className="join-discord-btn">
+              <i className="fab fa-twitter mr-2"></i>
+              TWITTER
+            </GradButton>
+          </div>
+          <div className="flex gap-6">
+            <GradButton link="#" className="join-discord-btn">
+              <i className="fab fa-instagram mr-2"></i>
+              INSTAGRAM
+            </GradButton>
+            <GradButton link="#" className="join-discord-btn">
+              <i className="fab fa-telegram mr-2"></i>
+              TELEGRAM
+            </GradButton>
+          </div>
         </div>
       </div>
     </section>

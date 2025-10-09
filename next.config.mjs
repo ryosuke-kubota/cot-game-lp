@@ -9,7 +9,10 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['dashboard-assets.dappradar.com'],
+    domains: [
+      'dashboard-assets.dappradar.com',
+      'prod-cot-game.s3.ap-northeast-1.amazonaws.com',
+    ],
   },
   reactStrictMode: false,
 };

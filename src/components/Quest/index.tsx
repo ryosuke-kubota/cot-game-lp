@@ -66,15 +66,11 @@ export default function Quest() {
           className="text-5xl font-bold mb-12"
           ref={questTitleRef}
         >
-          QB QUEST
+          Quest
         </RighteousText>
-        <p className="mb-12" ref={questTextRef}>
-          誰でも参加できる招待制のイベントです。
-          <br />
-          参加者はタスクを達成してポイントを獲得し、バッジNFTと交換できます。
-          <br />
-          過去に配布した如月ホルダー限定のバッジNFTとは別のバッジです。
-        </p>
+        {/* <p className="mb-12" ref={questTextRef}>
+          Coplay Battlesに参加するコスプレイヤーたち。
+        </p> */}
 
         <div ref={questSliderRef}>
           <SquereSlider />

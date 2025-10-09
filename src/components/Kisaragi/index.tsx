@@ -93,7 +93,7 @@ export default function Kisaragi() {
               如月 -KISARAGI-
             </RighteousText>
             <p className="mb-12 text-left" ref={kisaragiTextRef}>
-              「KISARAGI」は、NFTゲームに特化したソーシャルWeb3プラットフォームであり、NFTゲームプレイヤーのコミュニティであるGuildQBがリリースするBFTです。
+              「KISARAGI」は、NFTゲームに特化したソーシャルWeb3プラットフォームであり、NFTゲームプレイヤーのコミュニティであるCosplay TokenがリリースするBFTです。
             </p>
           </div>
           <div className="w-1/2 kisaragi-bg">
