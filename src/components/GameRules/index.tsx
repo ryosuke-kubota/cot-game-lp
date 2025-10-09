@@ -167,10 +167,10 @@ export default function GameRules() {
                     <th className="border border-purple-500 p-4 text-left whitespace-nowrap">
                       適用範囲
                     </th>
-                    <th className="border border-purple-500 p-4 text-left min-w-[600px] md:min-w-none">
+                    <th className="border border-purple-500 p-4 text-left min-w-[600px] md:min-w-full">
                       効果
                     </th>
-                    <th className="border border-purple-500 p-4 text-left min-w-[600px] md:min-w-none">
+                    <th className="border border-purple-500 p-4 text-left min-w-[600px] md:min-w-full">
                       例
                     </th>
                   </tr>
