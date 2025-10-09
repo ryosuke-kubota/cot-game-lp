@@ -1,0 +1,21 @@
+#leaderboard {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(229, 54, 112, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+
+  .leaderboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(229, 54, 112, 0.3);
+  }
+
+  .leaderboard-iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    display: block;
+  }
+}

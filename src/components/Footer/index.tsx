@@ -7,39 +7,18 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="inner text-center flex flex-row items-end justify-between py-12 px-4">
-        <div>
-          <div className="mb-10">
-            <Image
-              src="/assets/images/logo.png"
-              alt="Cosplay Token"
-              className="logo mb-4"
-              width={140}
-              height={30}
-            />
-            <p>テキストテキストテキストテキストテキストテキスト</p>
-          </div>
-          <div className="flex gap-10 text-left">
-            <div>
-              <h5>QB SOLUTIONS</h5>
-              <ul>
-                <li>AAAAAAA</li>
-                <li>AAAAAAA</li>
-              </ul>
-            </div>
-            <div>
-              <h5>DOGS -WP</h5>
-              <ul>
-                <li>AAAAAAA</li>
-                <li>AAAAAAA</li>
-              </ul>
-            </div>
-            <div>
-              <h5>OTHERS</h5>
-              <ul>
-                <li>AAAAAAA</li>
-                <li>AAAAAAA</li>
-              </ul>
-            </div>
+        <div className="mb-10">
+          <p className="text-whtie font-bold text-xl">Cosplay Battles</p>
+        </div>
+        <div className="flex gap-10 text-left">
+          <div>
+            <h5> Links</h5>
+            <ul>
+              <li>Game Rules</li>
+              <li>Cosplayers</li>
+              <li>Leaderboard</li>
+              <li>Partners</li>
+            </ul>
           </div>
         </div>
 

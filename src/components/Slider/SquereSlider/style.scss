@@ -111,8 +111,8 @@
     overflow: hidden;
     -webkit-transition: var(--transition), opacity 1s;
     transition: var(--transition), opacity 1s;
-    -webkit-box-shadow: 0px 0px 20px 5px #C92B5B;
-    box-shadow: 0px 0px 20px 5px #C92B5B;
+    -webkit-box-shadow: 0px 0px 20px 5px #c92b5b;
+    box-shadow: 0px 0px 20px 5px #c92b5b;
     padding: 2px;
     border-radius: 20px;
 
@@ -125,7 +125,7 @@
       bottom: 0;
       border-radius: 20px;
       border: 2px solid transparent;
-      background: linear-gradient(to bottom, #E53670, #C92B5B) border-box
+      background: linear-gradient(to bottom, #e53670, #c92b5b) border-box
         border-box;
       -webkit-mask: linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0) border-box;
@@ -164,11 +164,11 @@
     bottom: -40px !important;
     .swiper-pagination-bullet {
       background-color: transparent;
-      border: 1px solid #C92B5B;
+      border: 1px solid #c92b5b;
       opacity: 1;
 
       &-active {
-        background-color: #C92B5B;
+        background-color: #c92b5b;
       }
     }
   }

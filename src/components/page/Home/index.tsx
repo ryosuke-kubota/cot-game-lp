@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import JoinDiscord from '@/components/JoinDiscord';
 import Kisaragi from '@/components/Kisaragi';
+import Leaderboard from '@/components/Leaderboard';
 import News from '@/components/News';
 import Partners from '@/components/Partners';
 import Quest from '@/components/Quest';
@@ -15,6 +16,7 @@ import Roadmap from '@/components/Roadmap';
 import Solutions from '@/components/Solutions';
 import Stuts from '@/components/Stuts';
 import Topics from '@/components/Topics';
+import SNS from '@/components/SNS';
 
 export default function Home() {
   return (
@@ -27,16 +29,18 @@ export default function Home() {
         <GameRules />
         {/* <Kisaragi /> */}
         <Cosplayers />
-        <Quest />
+        {/* <Quest /> */}
         <Stuts />
         {/* <Solutions /> */}
         {/* <News /> */}
         {/* <Games /> */}
-        <Ranking />
+        <Leaderboard />
+        {/* <Ranking /> */}
         {/* <Roadmap /> */}
         <Partners />
+        <SNS />
 
-        <JoinDiscord />
+        {/* <JoinDiscord /> */}
       </main>
       <Footer />
     </>

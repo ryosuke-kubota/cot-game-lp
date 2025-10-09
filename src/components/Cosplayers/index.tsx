@@ -75,6 +75,15 @@ export default function Cosplayers() {
         <div ref={questSliderRef}>
           <SquereSlider />
         </div>
+        <div className="max-w-3xl mx-auto flex justify-center items-center space-x-4 mt-[120px]">
+          <BorderButton
+            link="https://cosplay-games.com/user/cosplayer"
+            target="_blank"
+            className="x-btn py-1"
+          >
+            View All
+          </BorderButton>
+        </div>
       </div>
     </section>
   );
