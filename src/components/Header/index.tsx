@@ -11,7 +11,7 @@ export default function Header() {
       <div className="text-whtie font-bold text-xl">
         <h1>Cosplay Battles</h1>
       </div>
-      <div className="flex items-center items-center space-x-4">
+      <div className="flex items-center items-center space-x-4 header-social-buttons">
         <BorderButton link="#" className="discord-btn py-1 flex">
           <Discord className="discord-icon" />
           Discord

@@ -54,7 +54,7 @@ export default function About() {
       <div className="inner text-center flex flex-col items-center justify-center py-24 px-4">
         <RighteousText
           tag="h2"
-          className="text-5xl font-bold mb-12"
+          className="text-3xl md:text-5xl font-bold mb-12"
           ref={aboutTitleRef}
         >
           ABOUT COT GAME

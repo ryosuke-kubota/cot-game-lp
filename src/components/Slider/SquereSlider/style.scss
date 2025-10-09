@@ -24,6 +24,15 @@
   .swiper {
     overflow: visible;
     width: 33.33%;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media (max-width: 480px) {
+      width: 90%;
+    }
+
     .swiper-slide {
       -webkit-transition: var(--transition);
       transition: var(--transition);
@@ -52,6 +61,16 @@
       cursor: pointer;
       -webkit-transition: var(--transition);
       transition: var(--transition);
+
+      @media (max-width: 768px) {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      @media (max-width: 480px) {
+        width: 3rem;
+        height: 3rem;
+      }
     }
     .swiper-button-prev::before,
     .swiper-button-next::before {
@@ -74,6 +93,18 @@
       width: 53px;
       height: 79px;
       transform: scale(0.8);
+
+      @media (max-width: 768px) {
+        width: 35px;
+        height: 52px;
+        // transform: scale(0.6);
+      }
+
+      @media (max-width: 480px) {
+        width: 26px;
+        height: 39px;
+        // transform: scale(0.5);
+      }
     }
     .swiper-button-prev::after {
       margin-left: 0.4rem;

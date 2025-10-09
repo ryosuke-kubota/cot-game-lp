@@ -6,9 +6,9 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 201, 43, 91;
   --background-end-rgb: 201, 43, 91;
-  --primary-color: #C92B5B;
-  --primary-dark: #A0224A;
-  --primary-light: #E53670;
+  --primary-color: #c92b5b;
+  --primary-dark: #a0224a;
+  --primary-light: #e53670;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -25,7 +25,7 @@ body {
 }
 body {
   color: rgb(var(--foreground-rgb));
-  background: #231447;
+  background: #18063d;
   /* background: linear-gradient(
       to bottom,
       transparent,
@@ -38,4 +38,39 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* レスポンシブ対応 */
+.inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* セクションのpaddingをスマホで調整 */
+section {
+  @media (max-width: 768px) {
+    .py-20 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+/* テーブルのスクロール対応 */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
 }

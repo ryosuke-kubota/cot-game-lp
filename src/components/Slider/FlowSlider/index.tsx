@@ -47,13 +47,24 @@ export default function FlowSlider() {
     <div className="flow-slider">
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={images.length / 3}
+        slidesPerView={2}
         loop={true}
         spaceBetween={20}
         speed={3000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          480: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: images.length / 3,
+          },
         }}
         grabCursor={true}
         className={'swiper h-fit mb-10'}
@@ -77,7 +88,7 @@ export default function FlowSlider() {
 
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={images2.length / 3}
+        slidesPerView={2}
         loop={true}
         spaceBetween={20}
         speed={3000}
@@ -85,6 +96,17 @@ export default function FlowSlider() {
           delay: 0,
           disableOnInteraction: false,
           reverseDirection: true,
+        }}
+        breakpoints={{
+          480: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          1024: {
+            slidesPerView: images2.length / 3,
+          },
         }}
         grabCursor={true}
         className={'swiper h-fit'}

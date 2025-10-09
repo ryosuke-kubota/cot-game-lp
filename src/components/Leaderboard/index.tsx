@@ -47,7 +47,7 @@ export default function Leaderboard() {
       <div className="inner text-center py-20 px-4">
         <RighteousText
           tag="h2"
-          className="text-5xl font-bold mb-12"
+          className="text-3xl md:text-5xl font-bold mb-12"
           ref={leaderboardTitleRef}
         >
           LEADERBOARD

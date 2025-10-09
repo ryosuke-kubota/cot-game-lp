@@ -6,6 +6,12 @@
     height: 100%;
   }
 
+  .header-social-buttons {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   .discord-btn,
   .x-btn {
     min-width: 150px;

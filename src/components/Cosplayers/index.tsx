@@ -63,7 +63,7 @@ export default function Cosplayers() {
       <div className="inner text-center py-20 px-4">
         <RighteousText
           tag="h2"
-          className="text-5xl font-bold mb-12"
+          className="text-3xl md:text-5xl font-bold mb-12"
           ref={questTitleRef}
         >
           Cosplayers
@@ -75,7 +75,7 @@ export default function Cosplayers() {
         <div ref={questSliderRef}>
           <SquereSlider />
         </div>
-        <div className="max-w-3xl mx-auto flex justify-center items-center space-x-4 mt-[120px]">
+        <div className="max-w-3xl mx-auto flex justify-center items-center space-x-4 mt-[60px] md:mt-[120px]">
           <BorderButton
             link="https://cosplay-games.com/user/cosplayer"
             target="_blank"

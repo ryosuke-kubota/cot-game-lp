@@ -30,7 +30,7 @@ export default function Home() {
         {/* <Kisaragi /> */}
         <Cosplayers />
         {/* <Quest /> */}
-        <Stuts />
+        {/* <Stuts /> */}
         {/* <Solutions /> */}
         {/* <News /> */}
         {/* <Games /> */}

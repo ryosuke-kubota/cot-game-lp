@@ -2,6 +2,15 @@ h2 {
   position: relative;
   width: fit-content;
   margin: auto;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+
   &::before {
     content: '';
     background-image: -webkit-gradient(
@@ -20,5 +29,17 @@ h2 {
     transform: translateY(-50%) skewX(-45deg);
     width: 30px;
     height: 15px;
+
+    @media (max-width: 768px) {
+      left: -35px;
+      width: 22px;
+      height: 11px;
+    }
+
+    @media (max-width: 480px) {
+      left: -25px;
+      width: 18px;
+      height: 9px;
+    }
   }
 }
