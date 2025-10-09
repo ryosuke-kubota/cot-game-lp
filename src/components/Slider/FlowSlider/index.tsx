@@ -8,15 +8,38 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './style.scss';
 
-// publicフォルダの画像
+// mediaListから取得したロゴ画像
 const images = [
-  '/assets/images/partners-img01_logo.png',
-  '/assets/images/partners-img02_logo.png',
-  '/assets/images/partners-img03_logo.png',
-  '/assets/images/partners-img04_logo.png',
-  '/assets/images/partners-img05_logo.png',
-  '/assets/images/partners-img06_logo.png',
-  '/assets/images/partners-img07_logo.png',
+  'https://cot.curecos.com/images/featuredIn/MEXC.png',
+  'https://cot.curecos.com/images/featuredIn/Chymia-logo3.png',
+  'https://cot.curecos.com/images/featuredIn/zai1.png',
+  'https://cot.curecos.com/images/featuredIn/BTSE_B.png',
+  'https://cot.curecos.com/images/featuredIn/bittrade.jpg',
+  'https://cot.curecos.com/images/featuredIn/UNISWAP-Logo.png',
+  'https://cot.curecos.com/images/featuredIn/QuickSwap_logo.png',
+  'https://cot.curecos.com/images/featuredIn/polygon-logo.png',
+  'https://cot.curecos.com/images/featuredIn/media_coingecko.png',
+  'https://cot.curecos.com/images/featuredIn/media_etherscan.png',
+  'https://cot.curecos.com/images/featuredIn/media_23.png',
+  'https://cot.curecos.com/images/featuredIn/media_26.png',
+  'https://cot.curecos.com/images/featuredIn/media_27.png',
+  'https://cot.curecos.com/images/featuredIn/media_21.png',
+];
+
+const images2 = [
+  'https://cot.curecos.com/images/featuredIn/media_22.png',
+  'https://cot.curecos.com/images/featuredIn/media_28.png',
+  'https://cot.curecos.com/images/featuredIn/media_29.png',
+  'https://cot.curecos.com/images/featuredIn/media_30.png',
+  'https://cot.curecos.com/images/featuredIn/media_31.png',
+  'https://cot.curecos.com/images/featuredIn/media_32.png',
+  'https://cot.curecos.com/images/featuredIn/media_33.png',
+  'https://cot.curecos.com/images/featuredIn/media_34.png',
+  'https://cot.curecos.com/images/featuredIn/media_35.png',
+  'https://cot.curecos.com/images/featuredIn/media_36.png',
+  'https://cot.curecos.com/images/featuredIn/ICObenchLogo.jpg',
+  'https://cot.curecos.com/images/featuredIn/bitcoinexchangeguideLogo.jpg',
+  'https://cot.curecos.com/images/featuredIn/turingum.png',
 ];
 
 export default function FlowSlider() {
@@ -24,7 +47,7 @@ export default function FlowSlider() {
     <div className="flow-slider">
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={images.length / 2}
+        slidesPerView={images.length / 3}
         loop={true}
         spaceBetween={20}
         speed={3000}
@@ -54,7 +77,7 @@ export default function FlowSlider() {
 
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={images.length / 2}
+        slidesPerView={images2.length / 3}
         loop={true}
         spaceBetween={20}
         speed={3000}
@@ -66,7 +89,7 @@ export default function FlowSlider() {
         grabCursor={true}
         className={'swiper h-fit'}
       >
-        {images.map((src: string, index: number) => (
+        {images2.map((src: string, index: number) => (
           <SwiperSlide tag={'a'} key={index} className="swiper-slide">
             <article className="slide">
               <Image src={src} width={1920} height={1440} alt="Slider Image" />

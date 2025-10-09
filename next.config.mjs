@@ -12,6 +12,7 @@ const nextConfig = {
     domains: [
       'dashboard-assets.dappradar.com',
       'prod-cot-game.s3.ap-northeast-1.amazonaws.com',
+      'cot.curecos.com',
     ],
   },
   reactStrictMode: false,

@@ -10,7 +10,7 @@ export default function Partners() {
     <section id="partners">
       <div className="inner text-center py-20">
         <RighteousText tag="h2" className="text-5xl font-bold mb-12">
-          QB Partners
+          Partners
         </RighteousText>
 
         <FlowSlider />
