@@ -1,65 +1,40 @@
+'use client';
+
 import './style.scss';
 import RighteousText from '../Headings/RighteousText';
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { motion } from 'framer-motion';
 
 export default function Leaderboard() {
-  const leaderboardRef = useRef<HTMLDivElement>(null);
-  const leaderboardTitleRef = useRef<HTMLDivElement>(null);
-  const leaderboardContentRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: leaderboardRef.current,
-        start: 'top-=100 center',
-        once: true,
-        markers: false,
-      },
-    });
-
-    tl.from(
-      leaderboardTitleRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.1,
-        ease: 'power2.out',
-      },
-      'same'
-    ).from(
-      leaderboardContentRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.2,
-        ease: 'power2.out',
-      },
-      'same'
-    );
-  }, [leaderboardRef, leaderboardTitleRef, leaderboardContentRef]);
-
   return (
-    <section id="leaderboard" ref={leaderboardRef}>
+    <section id="leaderboard">
       <div className="inner text-center py-20 px-4">
-        <RighteousText
-          tag="h2"
-          className="text-3xl md:text-5xl font-bold mb-12"
-          ref={leaderboardTitleRef}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          LEADERBOARD
-        </RighteousText>
+          <RighteousText
+            tag="h2"
+            className="text-3xl md:text-5xl font-bold mb-12"
+          >
+            LEADERBOARD
+          </RighteousText>
+        </motion.div>
 
-        <div ref={leaderboardContentRef} className="leaderboard-container">
+        <motion.div
+          className="leaderboard-container"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <iframe
             src="https://cosplay-games.com/user/leaderboard?type=all-time-winners"
             className="leaderboard-iframe"
             title="Leaderboard"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,62 +1,38 @@
+'use client';
+
 import './style.scss';
 import RighteousText from '../Headings/RighteousText';
 import TopGamesTable from './TopGamesTable';
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { motion } from 'framer-motion';
 
 export default function Ranking() {
-  const rankingRef = useRef<HTMLDivElement>(null);
-  const rankingTitleRef = useRef<HTMLDivElement>(null);
-  const rankingTextRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: rankingRef.current,
-        start: 'top-=100 center',
-        once: true,
-        markers: false,
-      },
-    });
-
-    tl.from(
-      rankingTitleRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.1,
-        ease: 'power2.out',
-      },
-      'same'
-    ).from(
-      rankingTextRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.2,
-        ease: 'power2.out',
-      },
-      'same'
-    );
-  }, [rankingRef, rankingTitleRef, rankingTextRef]);
   return (
-    <section id="ranking" ref={rankingRef}>
+    <section id="ranking">
       <div className="inner text-center py-20 px-12">
-        <RighteousText
-          tag="h2"
-          className="text-5xl font-bold mb-12"
-          ref={rankingTitleRef}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          LEADERBOARD
-        </RighteousText>
-        <p className="mb-16" ref={rankingTextRef}>
+          <RighteousText
+            tag="h2"
+            className="text-5xl font-bold mb-12"
+          >
+            LEADERBOARD
+          </RighteousText>
+        </motion.div>
+        <motion.p
+          className="mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           COTゲームのトッププレイヤーランキング
           <br />
           ランキング上位者には特別な報酬が用意されています
-        </p>
+        </motion.p>
 
         <TopGamesTable />
       </div>

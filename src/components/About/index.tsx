@@ -1,66 +1,33 @@
-import { useRef } from 'react';
+'use client';
 import RighteousText from '../Headings/RighteousText';
-import SocialButtons from '../SocialButtons';
 import './style.scss';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import SplitText from 'gsap-trial/SplitText';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
-gsap.config({ trialWarn: false } as any);
+import { motion } from 'framer-motion';
 
 export default function About() {
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const aboutTitleRef = useRef<HTMLDivElement>(null);
-  const aboutVideoRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: aboutRef.current,
-        start: 'top-=100 center',
-        once: true,
-        markers: false,
-      },
-    });
-
-    tl.from(
-      aboutTitleRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.1,
-        ease: 'power2.out',
-      },
-      'same'
-    ).from(
-      aboutVideoRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.2,
-        ease: 'power2.out',
-      },
-      'same'
-    );
-  }, [aboutRef, aboutTitleRef, aboutVideoRef]);
-
   return (
-    <section id="about" ref={aboutRef}>
+    <section id="about">
       <div className="inner text-center flex flex-col items-center justify-center py-24 px-4">
-        <RighteousText
-          tag="h2"
-          className="text-3xl md:text-5xl font-bold mb-12"
-          ref={aboutTitleRef}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          ABOUT COT GAME
-        </RighteousText>
+          <RighteousText
+            tag="h2"
+            className="text-3xl md:text-5xl font-bold mb-12"
+          >
+            ABOUT COT GAME
+          </RighteousText>
+        </motion.div>
 
-        <div className="video-container w-full max-w-4xl" ref={aboutVideoRef}>
+        <motion.div
+          className="video-container w-full max-w-4xl"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-2xl"
@@ -71,7 +38,7 @@ export default function About() {
               allowFullScreen
             ></iframe>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

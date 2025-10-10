@@ -1,11 +1,7 @@
-import { useRef } from 'react';
+'use client';
 import RighteousText from '../Headings/RighteousText';
 import './style.scss';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from 'framer-motion';
 
 // カードデータ
 const cardData = [
@@ -78,61 +74,24 @@ const cardData = [
 ];
 
 export default function GameRules() {
-  const rulesRef = useRef<HTMLDivElement>(null);
-  const rulesTitleRef = useRef<HTMLDivElement>(null);
-  const rulesListRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: rulesRef.current,
-        start: 'top-=100 center',
-        once: true,
-        markers: false,
-      },
-    });
-
-    tl.from(
-      rulesTitleRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.1,
-        ease: 'power2.out',
-      },
-      'same'
-    );
-
-    if (rulesListRef.current?.children) {
-      tl.from(
-        rulesListRef.current.children,
-        {
-          duration: 0.5,
-          y: 50,
-          opacity: 0,
-          stagger: 0.2,
-        },
-        'same'
-      );
-    }
-  }, [rulesRef, rulesTitleRef, rulesListRef]);
-
   return (
-    <section id="game-rules" ref={rulesRef}>
+    <section id="game-rules">
       <div className="inner text-center py-20 px-4">
-        <RighteousText
-          tag="h2"
-          className="text-3xl md:text-5xl font-bold mb-12"
-          ref={rulesTitleRef}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Game Rules
-        </RighteousText>
+          <RighteousText
+            tag="h2"
+            className="text-3xl md:text-5xl font-bold mb-12"
+          >
+            Game Rules
+          </RighteousText>
+        </motion.div>
 
-        <div
-          className="rules-content max-w-6xl mx-auto text-left"
-          ref={rulesListRef}
-        >
+        <div className="rules-content max-w-6xl mx-auto text-left">
           {/* ガチャシステム */}
           <div className="rule-section mb-12 text-sm md:text-base">
             <div className="rule-card mb-6">

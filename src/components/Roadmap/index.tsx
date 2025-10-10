@@ -1,123 +1,69 @@
+'use client';
+
 import './style.scss';
 import RighteousText from '../Headings/RighteousText';
 import Image from 'next/image';
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { motion } from 'framer-motion';
 
 export default function Roadmap() {
-  const roadmapRef = useRef<HTMLDivElement>(null);
-  const roadmapTitleRef = useRef<HTMLDivElement>(null);
-  const roadmapTextRef = useRef<HTMLDivElement>(null);
-  const roadmapImageRef = useRef<HTMLDivElement>(null);
-  const roadmapListRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: roadmapRef.current,
-        start: 'top center',
-        once: true,
-        markers: false,
-      },
-    });
-
-    tl.from(
-      roadmapTitleRef.current,
-      {
-        opacity: 0,
-        y: 50,
-        duration: 0.5,
-        delay: 0.1,
-        ease: 'power2.out',
-      },
-      'same'
-    )
-      .from(
-        roadmapTextRef.current,
-        {
-          opacity: 0,
-          y: 50,
-          duration: 0.5,
-          delay: 0.2,
-          ease: 'power2.out',
-        },
-        'same'
-      )
-      .set(roadmapImageRef.current, { autoAlpha: 1 })
-      .from(
-        roadmapImageRef.current,
-        {
-          xPercent: -100,
-          duration: 2,
-          ease: 'Power2.out',
-          delay: 0.3,
-        },
-        'same'
-      );
-
-    if (roadmapImageRef.current?.children[0]) {
-      tl.from(
-        roadmapImageRef.current.children[0],
-        {
-          xPercent: 100,
-          duration: 2,
-          delay: 0.3,
-          ease: 'Power2.out',
-        },
-        'same'
-      );
-    }
-
-    if (roadmapListRef.current?.children) {
-      tl.from(
-        roadmapListRef.current.children,
-        {
-          duration: 0.5,
-          y: 50,
-          opacity: 0,
-          delay: 0.3,
-          stagger: 0.5,
-        },
-        'same'
-      );
-    }
-  }, [
-    roadmapRef,
-    roadmapTitleRef,
-    roadmapTextRef,
-    roadmapImageRef,
-    roadmapListRef,
-  ]);
   return (
-    <section id="roadmap" ref={roadmapRef}>
+    <section id="roadmap">
       <div className="inner text-center py-20 px-12">
-        <RighteousText
-          tag="h2"
-          className="text-5xl font-bold mb-12"
-          ref={roadmapTitleRef}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Roadmap
-        </RighteousText>
-        <p className="" ref={roadmapTextRef}>
+          <RighteousText
+            tag="h2"
+            className="text-5xl font-bold mb-12"
+          >
+            Roadmap
+          </RighteousText>
+        </motion.div>
+        <motion.p
+          className=""
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテ
           <br />
           キストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        </p>
-        <div
-          className="w-[80%] m-auto overflow-hidden invisible"
-          ref={roadmapImageRef}
-        >
-          <Image
-            className="roadmap-img"
-            src={'/assets/images/roadmap.png'}
-            width={'369'}
-            height={'1422'}
-            alt={'Roadmap'}
-          ></Image>
+        </motion.p>
+        <div className="w-[80%] m-auto overflow-hidden">
+          <motion.div
+            initial={{ opacity: 1, x: '-100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 2, delay: 0.3 }}
+          >
+            <motion.div
+              initial={{ x: '100%' }}
+              whileInView={{ x: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 2, delay: 0.3 }}
+            >
+              <Image
+                className="roadmap-img"
+                src={'/assets/images/roadmap.png'}
+                width={'369'}
+                height={'1422'}
+                alt={'Roadmap'}
+              ></Image>
+            </motion.div>
+          </motion.div>
         </div>
-        <div className="roadmap-list flex gap-20" ref={roadmapListRef}>
-          <div className="roadmap-item roadmap-item-1 w-1/4">
+        <div className="roadmap-list flex gap-20">
+          <motion.div
+            className="roadmap-item roadmap-item-1 w-1/4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <div className="roadmap-item-title flex justify-start items-center">
               <RighteousText tag="div" className="roadmap-item-title-number">
                 1
@@ -147,9 +93,15 @@ export default function Roadmap() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="roadmap-item roadmap-item-2 w-1/4">
+          <motion.div
+            className="roadmap-item roadmap-item-2 w-1/4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
             <div className="roadmap-item-title flex justify-start items-center">
               <RighteousText tag="div" className="roadmap-item-title-number">
                 2
@@ -180,9 +132,15 @@ export default function Roadmap() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="roadmap-item roadmap-item-3 w-1/4">
+          <motion.div
+            className="roadmap-item roadmap-item-3 w-1/4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 1.3 }}
+          >
             <div className="roadmap-item-title flex justify-start items-center">
               <RighteousText tag="div" className="roadmap-item-title-number">
                 3
@@ -219,9 +177,15 @@ export default function Roadmap() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="roadmap-item roadmap-item-4 w-1/4">
+          <motion.div
+            className="roadmap-item roadmap-item-4 w-1/4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 1.8 }}
+          >
             <div className="roadmap-item-title flex justify-start items-center">
               <RighteousText tag="div" className="roadmap-item-title-number">
                 4
@@ -257,7 +221,7 @@ export default function Roadmap() {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
