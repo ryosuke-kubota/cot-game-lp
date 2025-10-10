@@ -44,9 +44,11 @@ export default function Games() {
           ease: 'power2.out',
         },
         'same'
-      )
-      .from(
-        gamesListRef.current?.children,
+      );
+
+    if (gamesListRef.current?.children) {
+      tl.from(
+        gamesListRef.current.children,
         {
           duration: 0.3,
           scale: 0,
@@ -54,18 +56,20 @@ export default function Games() {
           stagger: 0.125,
         },
         'same'
-      )
-      .from(
-        gamesSlideRef.current,
-        {
-          opacity: 0,
-          y: 50,
-          duration: 0.5,
-          delay: 0.4,
-          ease: 'power2.out',
-        },
-        'same'
       );
+    }
+
+    tl.from(
+      gamesSlideRef.current,
+      {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        delay: 0.4,
+        ease: 'power2.out',
+      },
+      'same'
+    );
   }, [gamesRef, gamesTitleRef, gamesTextRef, gamesListRef, gamesSlideRef]);
 
   return (
