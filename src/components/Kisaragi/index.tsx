@@ -10,7 +10,7 @@ export default function Kisaragi() {
   const kisaragiTitleRef = useRef<HTMLDivElement>(null);
   const kisaragiTextRef = useRef<HTMLDivElement>(null);
   const kisaragiImageContainerRef = useRef<HTMLDivElement>(null);
-  const kisaragiImageRef = useRef<HTMLDivElement>(null);
+  const kisaragiImageRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
     // let splitText = new SplitText(kisaragiTextRef.current, {

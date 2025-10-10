@@ -54,9 +54,11 @@ export default function Roadmap() {
           delay: 0.3,
         },
         'same'
-      )
-      .from(
-        roadmapImageRef.current?.children[0],
+      );
+
+    if (roadmapImageRef.current?.children[0]) {
+      tl.from(
+        roadmapImageRef.current.children[0],
         {
           xPercent: 100,
           duration: 2,
@@ -64,9 +66,12 @@ export default function Roadmap() {
           ease: 'Power2.out',
         },
         'same'
-      )
-      .from(
-        roadmapListRef.current?.children,
+      );
+    }
+
+    if (roadmapListRef.current?.children) {
+      tl.from(
+        roadmapListRef.current.children,
         {
           duration: 0.5,
           y: 50,
@@ -76,6 +81,7 @@ export default function Roadmap() {
         },
         'same'
       );
+    }
   }, [
     roadmapRef,
     roadmapTitleRef,
