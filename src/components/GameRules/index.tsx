@@ -102,16 +102,20 @@ export default function GameRules() {
         ease: 'power2.out',
       },
       'same'
-    ).from(
-      rulesListRef.current?.children,
-      {
-        duration: 0.5,
-        y: 50,
-        opacity: 0,
-        stagger: 0.2,
-      },
-      'same'
     );
+
+    if (rulesListRef.current?.children) {
+      tl.from(
+        rulesListRef.current.children,
+        {
+          duration: 0.5,
+          y: 50,
+          opacity: 0,
+          stagger: 0.2,
+        },
+        'same'
+      );
+    }
   }, [rulesRef, rulesTitleRef, rulesListRef]);
 
   return (
