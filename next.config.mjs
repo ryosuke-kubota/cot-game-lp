@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  images: {
+    unoptimized: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -7,13 +12,6 @@ const nextConfig = {
     });
 
     return config;
-  },
-  images: {
-    domains: [
-      'dashboard-assets.dappradar.com',
-      'prod-cot-game.s3.ap-northeast-1.amazonaws.com',
-      'cot.curecos.com',
-    ],
   },
   reactStrictMode: false,
 };

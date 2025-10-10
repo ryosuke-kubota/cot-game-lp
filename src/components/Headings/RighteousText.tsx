@@ -1,18 +1,17 @@
 import { Righteous } from 'next/font/google';
 const righteous = Righteous({ weight: ['400'], subsets: ['latin'] });
 import './style.scss';
-import { Ref, RefObject, forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 interface RighteousTextProps {
   tag: keyof JSX.IntrinsicElements;
   children: React.ReactNode;
   className?: string;
-  ref: RefObject<HTMLElement>;
 }
 
 const RighteousText = forwardRef<HTMLElement, RighteousTextProps>(
-  ({ tag: Tag, children, className }, ref: Ref<HTMLElement>) => (
-    <Tag className={[righteous.className, className].join(' ')} ref={ref}>
+  ({ tag: Tag, children, className }, ref) => (
+    <Tag className={[righteous.className, className].join(' ')} ref={ref as any}>
       {children}
     </Tag>
   )
