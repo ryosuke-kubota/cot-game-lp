@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
-gsap.config({ trialWarn: false });
+gsap.config({ trialWarn: false } as any);
 
 export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
