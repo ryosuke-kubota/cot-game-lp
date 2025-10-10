@@ -17,10 +17,12 @@ import Solutions from '@/components/Solutions';
 import Stuts from '@/components/Stuts';
 import Topics from '@/components/Topics';
 import SNS from '@/components/SNS';
+import BasePathProvider from '@/components/BasePathProvider';
 
 export default function Home() {
   return (
     <>
+      <BasePathProvider />
       <Header />
       <main>
         <Hero />
