@@ -4,8 +4,15 @@ import './style.scss';
 import { motion } from 'framer-motion';
 
 export default function About() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
-    <section id="about">
+    <section
+      id="about"
+      style={{
+        backgroundImage: `url('${basePath}/assets/images/bg/about-bg.png')`,
+      }}
+    >
       <div className="inner text-center flex flex-col items-center justify-center py-24 px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

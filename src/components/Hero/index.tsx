@@ -7,6 +7,7 @@ import RighteousText from '../Headings/RighteousText';
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   useEffect(() => {
     // コンポーネントがマウントされたらアニメーションを開始
@@ -19,6 +20,9 @@ export default function Hero() {
       className={`flex flex-col md:flex-row justify-center items-center py-20 ${
         isVisible ? 'hero-visible' : ''
       }`}
+      style={{
+        backgroundImage: `url('${basePath}/assets/images/bg/hero-bg.png')`,
+      }}
     >
       {/* タイトル - 常に最上部 */}
       <div className="left px-4 md:px-24 w-full md:w-1/2 text-center md:text-left order-1 md:order-1">

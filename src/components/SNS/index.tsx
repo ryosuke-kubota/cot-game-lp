@@ -6,8 +6,15 @@ import './style.scss';
 import { motion } from 'framer-motion';
 
 export default function SNS() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
-    <section id="join-discord">
+    <section
+      id="join-discord"
+      style={{
+        backgroundImage: `url('${basePath}/assets/images/bg/sns-bg.png')`,
+      }}
+    >
       <div className="inner text-center flex flex-col items-center justify-center py-20 px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
