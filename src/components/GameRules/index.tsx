@@ -93,7 +93,13 @@ export default function GameRules() {
 
         <div className="rules-content max-w-6xl mx-auto text-left">
           {/* ガチャシステム */}
-          <div className="rule-section mb-12 text-sm md:text-base">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="rule-section mb-12 text-sm md:text-base"
+          >
             <div className="rule-card mb-6">
               <p className="text-gray-300 mb-4">
                 プレイヤーはCOTポイントを使用してガチャを回し、追加ポイントやカードなどの様々な報酬を獲得できます。
@@ -108,10 +114,16 @@ export default function GameRules() {
                 まとめて回すことができます。
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* カードの種類と効果 */}
-          <div className="rule-section mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="rule-section mb-12"
+          >
             <h3 className="text-2xl font-bold mb-6 text-pink-400">
               ガチャ報酬
             </h3>
@@ -361,7 +373,7 @@ export default function GameRules() {
                 </tbody>
               </table>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

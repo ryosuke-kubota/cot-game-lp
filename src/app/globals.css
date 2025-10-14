@@ -61,12 +61,10 @@ body {
 }
 
 /* セクションのpaddingをスマホで調整 */
-section {
-  @media (max-width: 768px) {
-    .py-20 {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
+@media (max-width: 768px) {
+  section .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 

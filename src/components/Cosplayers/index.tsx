@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 export default function Cosplayers() {
   return (
-    <section id="quest">
+    <section id="cosplayers">
       <div className="inner text-center py-20 px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
