@@ -41,7 +41,9 @@ export default function Hero() {
             isVisible ? 'slide-in-left' : ''
           }`}
         >
-          <GradButton link="#">Cosplay GAME</GradButton>
+          <GradButton link="https://cosplay-games.com/" target="_blank">
+            Cosplay GAME
+          </GradButton>
           <BorderButton link="#">Whitepaper</BorderButton>
         </div>
       </div>

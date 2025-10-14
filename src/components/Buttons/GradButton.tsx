@@ -4,11 +4,12 @@ interface ButtonProps {
   link: string;
   children: React.ReactNode;
   className?: string;
+  target?: string;
 }
 
-const GradButton: React.FC<ButtonProps> = ({ link, children, className }) => (
+const GradButton: React.FC<ButtonProps> = ({ link, children, className, target }) => (
   <div className={`grad-btn ${styles.btnGrad}`}>
-    <a href={link} className={`py-3 ${className}`}>
+    <a href={link} className={`py-3 ${className}`} target={target}>
       {children}
     </a>
   </div>
