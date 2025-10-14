@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="right w-full md:w-1/2 mt-8 md:mt-0 order-2 md:order-2 max-w-[70%] md:max-w-full">
         <div className={`hero-image ${isVisible ? 'slide-in-right' : ''}`}>
           <Image
-            src="/assets/images/banner.png"
+            src={`${basePath}/assets/images/banner.png`}
             className="w-full"
             alt=""
             width={500}
