@@ -2,6 +2,7 @@
 
 import GradButton from '../Buttons/GradButton';
 import RighteousText from '../Headings/RighteousText';
+import { Twitter } from '../Icons';
 import './style.scss';
 import { motion } from 'framer-motion';
 
@@ -49,23 +50,46 @@ export default function SNS() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto">
-            <GradButton link="#" className="join-discord-btn w-full md:w-auto">
-              <i className="fab fa-discord mr-2"></i>
-              DISCORD
+            <GradButton
+              link="https://x.com/cotgame_gg"
+              target="_blank"
+              className="join-discord-btn w-full h-full md:w-auto"
+            >
+              <Twitter className="x-icon" />
             </GradButton>
-            <GradButton link="#" className="join-discord-btn w-full md:w-auto">
-              <i className="fab fa-twitter mr-2"></i>
-              TWITTER
+            <GradButton
+              link="https://t.me/cotgame_gg"
+              target="_blank"
+              className="join-discord-btn w-full md:w-auto"
+            >
+              <i className="fab fa-telegram mr-2"></i>
+              TELEGRAM
+            </GradButton>
+            <GradButton
+              link="https://www.youtube.com/@cotgame_gg"
+              target="_blank"
+              className="join-discord-btn w-full md:w-auto"
+            >
+              <i className="fab fa-youtube mr-2"></i>
+              YOUTUBE
             </GradButton>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto">
-            <GradButton link="#" className="join-discord-btn w-full md:w-auto">
+            <GradButton
+              link="https://www.instagram.com/cotgame_gg"
+              target="_blank"
+              className="join-discord-btn w-full md:w-auto"
+            >
               <i className="fab fa-instagram mr-2"></i>
               INSTAGRAM
             </GradButton>
-            <GradButton link="#" className="join-discord-btn w-full md:w-auto">
-              <i className="fab fa-telegram mr-2"></i>
-              TELEGRAM
+            <GradButton
+              link="https://www.facebook.com/share/1Cua6H1ymm/"
+              target="_blank"
+              className="join-discord-btn w-full md:w-auto"
+            >
+              <i className="fab fa-facebook mr-2"></i>
+              FACEBOOK
             </GradButton>
           </div>
         </motion.div>

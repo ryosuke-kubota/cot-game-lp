@@ -22,10 +22,7 @@ export default function JoinDiscord() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <RighteousText
-            tag="h2"
-            className="text-5xl font-bold mb-12"
-          >
+          <RighteousText tag="h2" className="text-5xl font-bold mb-12">
             JOIN OUR COMMUNITY
           </RighteousText>
         </motion.div>
@@ -49,23 +46,27 @@ export default function JoinDiscord() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="flex gap-6">
-            <GradButton link="#" className="join-discord-btn">
-              <i className="fab fa-discord mr-2"></i>
-              DISCORD
+            <GradButton link="https://x.com/cotgame_gg" target="_blank" className="join-discord-btn">
+              <i className="fab fa-x-twitter mr-2"></i>
+              X
             </GradButton>
-            <GradButton link="#" className="join-discord-btn">
-              <i className="fab fa-twitter mr-2"></i>
-              TWITTER
+            <GradButton link="https://t.me/cotgame_gg" target="_blank" className="join-discord-btn">
+              <i className="fab fa-telegram mr-2"></i>
+              TELEGRAM
+            </GradButton>
+            <GradButton link="https://www.youtube.com/@cotgame_gg" target="_blank" className="join-discord-btn">
+              <i className="fab fa-youtube mr-2"></i>
+              YOUTUBE
             </GradButton>
           </div>
           <div className="flex gap-6">
-            <GradButton link="#" className="join-discord-btn">
+            <GradButton link="https://www.instagram.com/cotgame_gg" target="_blank" className="join-discord-btn">
               <i className="fab fa-instagram mr-2"></i>
               INSTAGRAM
             </GradButton>
             <GradButton link="#" className="join-discord-btn">
-              <i className="fab fa-telegram mr-2"></i>
-              TELEGRAM
+              <i className="fab fa-facebook mr-2"></i>
+              FACEBOOK
             </GradButton>
           </div>
         </motion.div>

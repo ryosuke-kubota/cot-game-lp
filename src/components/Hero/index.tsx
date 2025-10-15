@@ -44,7 +44,9 @@ export default function Hero() {
           <GradButton link="https://cosplay-games.com/" target="_blank">
             Cosplay GAME
           </GradButton>
-          <BorderButton link="#">Whitepaper</BorderButton>
+          <BorderButton link="https://t.me/cotgame_gg" target="_blank">
+            Community
+          </BorderButton>
         </div>
       </div>
 

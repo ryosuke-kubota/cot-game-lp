@@ -13,15 +13,22 @@
   }
 
   .discord-btn,
+  .telegram-btn,
   .x-btn {
     min-width: 150px;
     gap: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 16px;
 
     .discord-icon,
-    .x-icon {
+    .telegram-icon {
       height: 25px;
+      width: auto;
+      color: white;
+    }
+
+    .x-icon {
+      height: 20px;
     }
   }
 }
