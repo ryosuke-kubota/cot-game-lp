@@ -38,12 +38,15 @@ export default function About() {
           <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full rounded-2xl"
-              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              src="https://drive.google.com/file/d/1lo8T5YRulyt9oVieUiesFm3E2ySJYWXG/preview"
+              allow="autoplay"
               title="COT Game Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            />
+            {/* Google Driveへのリンクをブロックするオーバーレイ（右上のロゴ部分のみ） */}
+            <div
+              className="absolute top-0 right-0 w-32 h-16 z-10"
+              style={{ pointerEvents: 'auto' }}
+            />
           </div>
         </motion.div>
       </div>

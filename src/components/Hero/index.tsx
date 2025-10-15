@@ -69,8 +69,12 @@ export default function Hero() {
           isVisible ? 'slide-in-left' : ''
         }`}
       >
-        <GradButton link="#">Cosplay GAME</GradButton>
-        <BorderButton link="#">Whitepaper</BorderButton>
+        <GradButton link="https://cosplay-games.com/" target="_blank">
+          Cosplay GAME
+        </GradButton>
+        <BorderButton link="https://t.me/cotgame_gg" target="_blank">
+          Community
+        </BorderButton>
       </div>
     </section>
   );

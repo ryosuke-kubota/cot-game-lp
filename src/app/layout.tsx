@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Righteous } from 'next/font/google';
 import './globals.css';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Cosplay Battles',
     images: [
       {
-        url: '/ogp.png',
+        url: 'https://lp.cosplay-games.com/ogp.png',
         width: 1200,
         height: 630,
         alt: 'Cosplay Battles',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     title: 'Cosplay Battles',
     description:
       'Cosplay Battles is a blockchain-based platform featuring competitive cosplay battles, gacha systems, and exciting gameplay.',
-    images: ['/ogp.png'],
+    images: ['https://lp.cosplay-games.com/ogp.png'],
   },
 };
 
@@ -66,7 +67,9 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.className}`}>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

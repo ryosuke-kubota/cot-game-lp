@@ -5,9 +5,11 @@ import RighteousText from '../Headings/RighteousText';
 import { Twitter } from '../Icons';
 import './style.scss';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SNS() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const { t } = useLanguage();
 
   return (
     <section
@@ -27,7 +29,7 @@ export default function SNS() {
             tag="h2"
             className="text-3xl md:ext-5xl font-bold mb-12"
           >
-            JOIN COMMUNITY
+            {t('join_community')}
           </RighteousText>
         </motion.div>
 
@@ -38,9 +40,12 @@ export default function SNS() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          COTゲームの最新情報やイベント情報をSNSでチェック！
-          <br />
-          コミュニティに参加して、他のプレイヤーと交流しよう
+          {t('community_description').split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              {i === 0 && <br />}
+            </span>
+          ))}
         </motion.p>
         <motion.div
           className="flex flex-col items-center gap-4 md:gap-8 w-full max-w-[70%] md:max-w-none"
