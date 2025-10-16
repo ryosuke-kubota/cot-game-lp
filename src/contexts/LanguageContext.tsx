@@ -53,6 +53,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Game Rules
     game_rules: 'Game Rules',
+    player_manual: 'プレイヤーマニュアル',
     gacha_description_1:
       'プレイヤーはCOTポイントを使用してガチャを回し、追加ポイントやカードなどの様々な報酬を獲得できます。',
     gacha_description_2:
@@ -139,6 +140,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Game Rules
     game_rules: 'Game Rules',
+    player_manual: 'Player Manual',
     gacha_description_1:
       'Players can spin the gacha using COT points to obtain various rewards such as additional points and cards.',
     gacha_description_2:

@@ -1,5 +1,6 @@
 'use client';
 import RighteousText from '../Headings/RighteousText';
+import GradButton from '../Buttons/GradButton';
 import './style.scss';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -92,12 +93,8 @@ export default function GameRules() {
             className="rule-section mb-12 text-sm md:text-base"
           >
             <div className="rule-card mb-6">
-              <p className="text-gray-300 mb-4">
-                {t('gacha_description_1')}
-              </p>
-              <p className="text-gray-300 mb-4">
-                {t('gacha_description_2')}
-              </p>
+              <p className="text-gray-300 mb-4">{t('gacha_description_1')}</p>
+              <p className="text-gray-300 mb-4">{t('gacha_description_2')}</p>
               <p className="text-gray-300">
                 {t('gacha_description_3').replace(/\*\*/g, '')}
               </p>
@@ -112,7 +109,33 @@ export default function GameRules() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="rule-section mb-12"
           >
-            <h3 className="text-2xl font-bold mb-6 text-pink-400">
+            {/* Player Manual */}
+            <h3 className="text-base md:text-2xl font-bold mb-6 text-pink-400">
+              {t('player_manual')}
+            </h3>
+            <div className="flex justify-center mb-12">
+              <GradButton link="https://cosplay-games.com/manual.pdf" target="_blank">
+                <span className="flex items-center gap-2">
+                  Player Manual
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </span>
+              </GradButton>
+            </div>
+
+            <h3 className="text-base md:text-2xl font-bold mb-6 text-pink-400">
               {t('gacha_rewards')}
             </h3>
             <p className="text-gray-300 mb-8 text-sm md:text-base">
@@ -148,20 +171,29 @@ export default function GameRules() {
                         {t(card.scopeKey)}
                       </td>
                       <td className="border border-purple-500 p-4">
-                        {t(card.effectKey).split('\n').map((line, i) => (
-                          <span key={i}>
-                            {line}
-                            {i < t(card.effectKey).split('\n').length - 1 && <br />}
-                          </span>
-                        ))}
+                        {t(card.effectKey)
+                          .split('\n')
+                          .map((line, i) => (
+                            <span key={i}>
+                              {line}
+                              {i < t(card.effectKey).split('\n').length - 1 && (
+                                <br />
+                              )}
+                            </span>
+                          ))}
                       </td>
                       <td className="border border-purple-500 p-4">
-                        {t(card.exampleKey).split('\n').map((line, i) => (
-                          <span key={i}>
-                            {line}
-                            {i < t(card.exampleKey).split('\n').length - 1 && <br />}
-                          </span>
-                        ))}
+                        {t(card.exampleKey)
+                          .split('\n')
+                          .map((line, i) => (
+                            <span key={i}>
+                              {line}
+                              {i <
+                                t(card.exampleKey).split('\n').length - 1 && (
+                                <br />
+                              )}
+                            </span>
+                          ))}
                       </td>
                     </tr>
                   ))}

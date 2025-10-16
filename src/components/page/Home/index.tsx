@@ -39,7 +39,7 @@ export default function Home() {
         <Leaderboard />
         {/* <Ranking /> */}
         {/* <Roadmap /> */}
-        <Partners />
+        {/* <Partners /> */}
         <SNS />
 
         {/* <JoinDiscord /> */}
