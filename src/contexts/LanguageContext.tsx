@@ -42,7 +42,7 @@ const translations: Record<Language, Record<string, string>> = {
     join_community: 'JOIN COMMUNITY',
     join_our_community: 'JOIN OUR COMMUNITY',
     community_description:
-      'COTゲームの最新情報やイベント情報をSNSでチェック！\nコミュニティに参加して、他のプレイヤーと交流しよう',
+      'Telegramコミュニティで限定情報をゲット！\n最新アップデート、特別イベント、ボーナス情報をいち早くチェック',
 
     // Social
     telegram: 'TELEGRAM',
@@ -129,7 +129,7 @@ const translations: Record<Language, Record<string, string>> = {
     join_community: 'JOIN COMMUNITY',
     join_our_community: 'JOIN OUR COMMUNITY',
     community_description:
-      'Check out the latest COT game news and event information on social media!\nJoin the community and connect with other players',
+      'Get exclusive updates on Telegram!\nLatest news, special events, and bonus information first',
 
     // Social
     telegram: 'TELEGRAM',

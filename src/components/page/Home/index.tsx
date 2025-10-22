@@ -18,6 +18,7 @@ import Stuts from '@/components/Stuts';
 import Topics from '@/components/Topics';
 import SNS from '@/components/SNS';
 import BasePathProvider from '@/components/BasePathProvider';
+import FloatingTelegramButton from '@/components/FloatingTelegramButton';
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
         {/* <JoinDiscord /> */}
       </main>
       <Footer />
+      <FloatingTelegramButton />
     </>
   );
 }

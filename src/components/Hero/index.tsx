@@ -41,11 +41,12 @@ export default function Hero() {
             isVisible ? 'slide-in-left' : ''
           }`}
         >
-          <GradButton link="https://cosplay-games.com/" target="_blank">
-            Cosplay GAME
+          <GradButton link="https://t.me/cotgame_gg" target="_blank">
+            <i className="fab fa-telegram mr-2"></i>
+            Join Community
           </GradButton>
-          <BorderButton link="https://t.me/cotgame_gg" target="_blank">
-            Community
+          <BorderButton link="https://cosplay-games.com/" target="_blank">
+            Cosplay GAME
           </BorderButton>
         </div>
       </div>
@@ -69,11 +70,12 @@ export default function Hero() {
           isVisible ? 'slide-in-left' : ''
         }`}
       >
-        <GradButton link="https://cosplay-games.com/" target="_blank">
-          Cosplay GAME
+        <GradButton link="https://t.me/cotgame_gg" target="_blank">
+          <i className="fab fa-telegram mr-2"></i>
+          Join Telegram
         </GradButton>
-        <BorderButton link="https://t.me/cotgame_gg" target="_blank">
-          Community
+        <BorderButton link="https://cosplay-games.com/" target="_blank">
+          Cosplay GAME
         </BorderButton>
       </div>
     </section>

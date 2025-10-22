@@ -1,0 +1,72 @@
+.floating-telegram-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #0088cc 0%, #229ed9 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  i {
+    font-size: 30px;
+    color: white;
+  }
+
+  .tooltip {
+    position: absolute;
+    right: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 30px rgba(0, 136, 204, 0.6);
+
+    .tooltip {
+      opacity: 1;
+    }
+  }
+
+  // スマホサイズでは少し小さく
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+
+    i {
+      font-size: 24px;
+    }
+
+    .tooltip {
+      display: none; // スマホではツールチップ非表示
+    }
+  }
+
+  // アニメーション
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(0, 136, 204, 0.8);
+  }
+}

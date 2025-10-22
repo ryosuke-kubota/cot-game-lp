@@ -1,6 +1,7 @@
 'use client';
 
 import GradButton from '../Buttons/GradButton';
+import BorderButton from '../Buttons/BorderButton';
 import RighteousText from '../Headings/RighteousText';
 import { Twitter } from '../Icons';
 import './style.scss';
@@ -40,12 +41,14 @@ export default function SNS() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {t('community_description').split('\n').map((line, i) => (
-            <span key={i}>
-              {line}
-              {i === 0 && <br />}
-            </span>
-          ))}
+          {t('community_description')
+            .split('\n')
+            .map((line, i) => (
+              <span key={i}>
+                {line}
+                {i === 0 && <br />}
+              </span>
+            ))}
         </motion.p>
         <motion.div
           className="flex flex-col items-center gap-4 md:gap-8 w-full max-w-[70%] md:max-w-none"
@@ -54,48 +57,49 @@ export default function SNS() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
+          {/* テレグラムボタンを大きく目立たせる */}
+          <GradButton
+            link="https://t.me/cotgame_gg"
+            target="_blank"
+            className="join-discord-btn w-full md:w-auto text-xs md:text-xl py-4 px-12"
+          >
+            <i className="fab fa-telegram mr-2 text-2xl"></i>
+            JOIN COMMUNITY
+          </GradButton>
+
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto">
-            <GradButton
+            <BorderButton
               link="https://x.com/cotgame_gg"
               target="_blank"
-              className="join-discord-btn w-full h-full md:w-auto"
+              className="join-discord-btn w-full h-full md:w-auto text-sm"
             >
-              <Twitter className="x-icon" />
-            </GradButton>
-            <GradButton
-              link="https://t.me/cotgame_gg"
-              target="_blank"
-              className="join-discord-btn w-full md:w-auto"
-            >
-              <i className="fab fa-telegram mr-2"></i>
-              TELEGRAM
-            </GradButton>
-            <GradButton
+              <Twitter className="x-icon mr-2" />
+              TWITTER
+            </BorderButton>
+            <BorderButton
               link="https://www.youtube.com/@cotgame_gg"
               target="_blank"
-              className="join-discord-btn w-full md:w-auto"
+              className="join-discord-btn w-full md:w-auto text-sm"
             >
               <i className="fab fa-youtube mr-2"></i>
               YOUTUBE
-            </GradButton>
-          </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-auto">
-            <GradButton
+            </BorderButton>
+            <BorderButton
               link="https://www.instagram.com/cotgame_gg"
               target="_blank"
-              className="join-discord-btn w-full md:w-auto"
+              className="join-discord-btn w-full md:w-auto text-sm"
             >
               <i className="fab fa-instagram mr-2"></i>
               INSTAGRAM
-            </GradButton>
-            <GradButton
+            </BorderButton>
+            <BorderButton
               link="https://www.facebook.com/share/1Cua6H1ymm/"
               target="_blank"
-              className="join-discord-btn w-full md:w-auto"
+              className="join-discord-btn w-full md:w-auto text-sm"
             >
               <i className="fab fa-facebook mr-2"></i>
               FACEBOOK
-            </GradButton>
+            </BorderButton>
           </div>
         </motion.div>
       </div>
