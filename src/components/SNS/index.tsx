@@ -85,7 +85,7 @@ export default function SNS() {
               YOUTUBE
             </BorderButton>
             <BorderButton
-              link="https://www.instagram.com/cotgame_gg"
+              link="https://www.instagram.com/cotgame.gg"
               target="_blank"
               className="join-discord-btn w-full md:w-auto text-sm"
             >

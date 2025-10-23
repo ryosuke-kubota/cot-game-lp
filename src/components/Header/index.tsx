@@ -33,7 +33,11 @@ export default function Header() {
           </button>
         </div>
         <div className="flex items-center space-x-4 header-social-buttons">
-          <BorderButton link="#" className="telegram-btn py-1">
+          <BorderButton
+            link="https://t.me/cotgame_gg"
+            target="_blank"
+            className="telegram-btn py-1"
+          >
             <Telegram className="telegram-icon" />
             Telegram
           </BorderButton>
