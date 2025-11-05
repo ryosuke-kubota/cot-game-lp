@@ -1,0 +1,2 @@
+[2/22/2024, 6:58:22 PM] layer "news-img01.png": Duplicate path: news-img01.png
+[2/22/2024, 6:58:22 PM] layer "partners-img01.png": Duplicate path: partners-img01.png

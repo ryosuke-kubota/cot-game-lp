@@ -1,0 +1,48 @@
+#cotx-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+
+  .hero-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+
+    span {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .hero-image {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+  }
+
+  .hero-buttons {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s ease-out;
+  }
+
+  &.hero-visible {
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-in-right {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-in-left {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

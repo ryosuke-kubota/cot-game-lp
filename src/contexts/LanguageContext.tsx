@@ -25,6 +25,11 @@ const translations: Record<Language, Record<string, string>> = {
       'あなたのお気に入りのコスプレイヤーに投票して、\n豪華賞品を獲得しよう',
     play_now: '今すぐプレイ',
 
+    // COTX Banner
+    cotx_banner_title: 'COT保有者限定：COTXへのスワップを11月下旬より受付開始',
+    cotx_banner_description: '詳細はこちらをご確認ください',
+    cotx_banner_tap_hint: 'タップして詳細を見る',
+
     // About
     what_is_cot: 'COTとは',
     cot_description:
@@ -102,6 +107,69 @@ const translations: Record<Language, Record<string, string>> = {
       'プレイヤーがラッキープレイヤーに当選した場合、配当が100%増加しますが、投票手数料も50%増加します。（配当はすべての手数料を差し引いた後に2倍になります）',
     card_careless_gambler_example:
       'UserA: 20ポイント、UserB: 30ポイント、UserC: 50ポイント\n\nケース1:\nUserAがカードを使用 (20 × 0.5) = 10ポイント\nUserA: 10ポイント、UserB: 30ポイント、UserC: 50ポイント\nUserAがラッキー抽選に当選した場合、受け取るポイントは (10 + 30 + 50) × 2 = 180ポイント\n\nケース2: 誰もカードを使用しない\nUserAがラッキー抽選に当選した場合、受け取るポイントは 20 + 30 + 50 = 100ポイント',
+
+    // COTX Page
+    cotx_page_title: 'COT保有者限定：COTXへのスワップを11月下旬より受付開始',
+    cotx_about_title: 'COT保有者限定：COTXへのスワップを11月下旬より受付開始',
+    cotx_overview_title: '概要',
+    cotx_overview_desc_1:
+      'COTトークン保有者を対象に、新トークン「COTX」へのスワップキャンペーンを実施いたします。COTXは、コスプレバトルゲームおよび新しいコスプレコミュニティ・トークノミクスで利用されるトークンであり、FG Wallet2.0を通じてスワップが可能になります。',
+    cotx_overview_desc_note:
+      '※すでにFG Wallet2.0にCOTを保存している方はそのままで申請可能です。',
+    cotx_about_cotx_title: 'COTXについて',
+    cotx_about_cotx_desc_1:
+      'COTXは、コスプレバトルゲームと新しいコスプレ・コミュニティ・トークノミクスを支えるトークンです。DEXでの流動性提供を経て、2028年初旬に取引所上場を予定しています。',
+    cotx_about_battles_title: 'Cosplay Battlesについて',
+    cotx_about_battles_desc_1:
+      'COTXが利用できる、ゲーム『Cosplay Battles』はCBポイントを使用してガチャから報酬や戦略カードを獲得するコミュニティベースのゲームです。カードは、投票数増加（Multiplier）やラッキープレイヤーになる確率増加（Lucky streak）、投票ポイント返金（Refund）など、バトルを有利にする特殊効果を持ちます。',
+    cotx_about_battles_desc_2:
+      'プレイヤーは毎日1回無料でガチャを利用可能です。著名などのコスプレイヤーが参加しており、戦略的にカードを使いより多くの報酬獲得を目指してください!',
+    cotx_about_battles_desc_note:
+      'また、コミュニティへの参加していただいた方には、無料のポイント獲得チャンスなどもあります。まずはコミュニティに参加してCosplay Gameの世界に触れよう!',
+    cotx_swap_details_title: 'スワップ概要',
+    cotx_swap_item: '項目',
+    cotx_swap_detail: '詳細',
+    cotx_swap_opens: '受付開始時期',
+    cotx_swap_opens_value: '2025年11月5日 FG Wallet2.0にCOTを移動',
+    cotx_swap_claim: '申請開始時期',
+    cotx_swap_claim_value:
+      '2025年11月下旬頃(ウォレット内にクレームボタンが表示)',
+    cotx_swap_snapshot: 'スナップショット日時',
+    cotx_swap_snapshot_value: '2025年12月31日 23:59 (GMT+8)',
+    cotx_swap_distribution: 'スワップ反映時期',
+    cotx_swap_distribution_value: '2026年初旬予定',
+    cotx_swap_eligibility: '対象',
+    cotx_swap_eligibility_value:
+      'FG Wallet内にCOTを保有し、スワップクレームボタンを押したユーザー',
+    cotx_swap_ratio: 'スワップ比率',
+    cotx_swap_ratio_value: '未定(後日別リリースにて発表)',
+    cotx_swap_current_chain: '対象チェーン',
+    cotx_swap_current_chain_value: 'Ethereum (ERC)',
+    cotx_swap_new_chain: '新チェーン',
+    cotx_swap_new_chain_value: 'TON Network',
+    cotx_swap_warning_title: '⚠️ 重要',
+    cotx_swap_warning:
+      'スナップショット時点でCOTを移動した場合は対象外となります。',
+    cotx_swap_exchanges_title: 'COT取り扱い取引所',
+    cotx_how_to_join_title: '参加方法',
+    cotx_step_1_title: 'FG Walletをダウンロード',
+    cotx_step_1_desc:
+      'FG Walletをダウンロードし、ウォレット内にCOTトークンを保有。',
+    cotx_step_2_title: 'スワップクレームボタンを押す',
+    cotx_step_2_desc:
+      '11月下旬にウォレット内に表示される「スワップクレームボタン」を押して申請。',
+    cotx_step_3_title: 'スナップショット',
+    cotx_step_3_desc:
+      '12月31日23:59(GMT+8)時点でのFG Wallet内COT残高がスナップショット対象。',
+    cotx_for_cosplayers_title: 'コスプレイヤーの方へ',
+    cotx_cosplayers_info_1:
+      'コスプレイヤーの方は、コスプレバトルサイトから登録してください。',
+    cotx_cosplayers_info_2: '世界に羽ばたくコスプレイヤーになろう。',
+    cotx_cosplayers_info_3: 'まずは右記Telegramコミュニティに登録',
+    cotx_related_links_title: '関連リンク',
+    cotx_official_sites: '公式サイト',
+    cotx_community: 'コミュニティ',
+    cotx_company_info: '会社概要',
   },
   en: {
     // Header
@@ -111,6 +179,11 @@ const translations: Record<Language, Record<string, string>> = {
     hero_title: 'Win the Cosplay Battle!',
     hero_subtitle: 'Vote for your favorite cosplayers and\nwin amazing prizes',
     play_now: 'Play Now',
+
+    // COTX Banner
+    cotx_banner_title: 'Exclusive for COT Holders: COTX Swap Opens Late November',
+    cotx_banner_description: 'Click here for details',
+    cotx_banner_tap_hint: 'Tap for details',
 
     // About
     what_is_cot: 'What is COT',
@@ -224,6 +297,70 @@ If UserA wins the lucky draw, the points received will be (10 + 30 + 50) * 2 = 1
 **Case 2:** No one uses a card
 If UserA wins the lucky draw, the points received will be 20 + 30 + 50 = 100 points
 `,
+
+    // COTX Page
+    cotx_page_title: 'Exclusive for COT Holders: COTX Swap Opens Late November',
+    cotx_about_title:
+      'Exclusive for COT Holders: COTX Swap Opens Late November',
+    cotx_overview_title: 'Overview',
+    cotx_overview_desc_1:
+      'A token swap campaign from COT to COTX will begin exclusively for existing COT holders. COTX will serve as the utility and governance token within the Cosplay Battle Game and the upcoming Cosplay Community Tokenomics ecosystem. The swap will be conducted via FG Wallet.',
+    cotx_overview_desc_note:
+      '* If you already have COT stored in FG Wallet 2.0, you can apply as is.',
+    cotx_about_cotx_title: 'About COTX',
+    cotx_about_cotx_desc_1:
+      'COTX is the token that powers the Cosplay Battle Game and a new cosplay-driven community tokenomics ecosystem. Following its DEX liquidity launch, COTX is scheduled to list on major exchanges in early 2028.',
+    cotx_about_battles_title: 'About Cosplay Battles',
+    cotx_about_battles_desc_1:
+      'The game "Cosplay Battles", where COTX will be utilized, is a community-based experience in which players use CB Points to draw gacha rewards and collect strategic cards. These cards feature special effects such as Multiplier (increasing vote counts), Lucky Streak (boosting the chance to become a lucky player), and Refund (returning voting points), helping players gain an advantage in battles.',
+    cotx_about_battles_desc_2:
+      'Each player can enjoy one free gacha spin per day. Famous cosplayers are participating, and players can strategically use cards to earn greater rewards!',
+    cotx_about_battles_desc_note:
+      'Community members also have opportunities to earn free points and special rewards. Join the community today and experience the exciting world of Cosplay Games.',
+    cotx_swap_details_title: 'Swap Details',
+    cotx_swap_item: 'Item',
+    cotx_swap_detail: 'Details',
+    cotx_swap_opens: 'Opens',
+    cotx_swap_opens_value: 'November 5, 2025 - Transfer COT to FG Wallet 2.0',
+    cotx_swap_claim: 'Swap Claim Opens',
+    cotx_swap_claim_value:
+      'Late November 2025 (Claim button will appear in wallet)',
+    cotx_swap_snapshot: 'Snapshot Date',
+    cotx_swap_snapshot_value: 'December 31, 2025 23:59 (GMT+8)',
+    cotx_swap_distribution: 'Swap Distribution',
+    cotx_swap_distribution_value: 'Early 2026 (planned)',
+    cotx_swap_eligibility: 'Eligibility',
+    cotx_swap_eligibility_value:
+      'Users who hold COT in FG Wallet and press the swap claim button',
+    cotx_swap_ratio: 'Swap Ratio',
+    cotx_swap_ratio_value: 'TBA (To be announced in a separate release)',
+    cotx_swap_current_chain: 'Current Token Chain',
+    cotx_swap_current_chain_value: 'Ethereum (ERC)',
+    cotx_swap_new_chain: 'New Token Chain',
+    cotx_swap_new_chain_value: 'TON Network',
+    cotx_swap_warning_title: '⚠️ Important',
+    cotx_swap_warning:
+      'Token Lock Policy: If COT is transferred at the time of the snapshot, it will be excluded from the swap.',
+    cotx_swap_exchanges_title: 'Exchanges Trading COT',
+    cotx_how_to_join_title: 'How to Join',
+    cotx_step_1_title: 'Download FG Wallet',
+    cotx_step_1_desc: 'Download FG Wallet and hold COT tokens in your wallet.',
+    cotx_step_2_title: 'Press Swap Claim Button',
+    cotx_step_2_desc:
+      'In late November, press the "Swap Claim Button" displayed in your wallet to apply.',
+    cotx_step_3_title: 'Snapshot',
+    cotx_step_3_desc:
+      'Your COT balance in FG Wallet as of December 31, 23:59 (GMT+8) will be snapshotted.',
+    cotx_for_cosplayers_title: 'For Cosplayers',
+    cotx_cosplayers_info_1:
+      'Cosplayers can register through the Cosplay Battle site.',
+    cotx_cosplayers_info_2:
+      'Become a cosplayer who spreads their wings to the world.',
+    cotx_cosplayers_info_3: 'First, join our Telegram community',
+    cotx_related_links_title: 'Related Links',
+    cotx_official_sites: 'Official Sites',
+    cotx_community: 'Community',
+    cotx_company_info: 'Company Information',
   },
 };
 

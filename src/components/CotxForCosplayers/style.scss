@@ -1,0 +1,16 @@
+#cotx-for-cosplayers {
+  .content-box {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .info-item {
+    padding: 1rem;
+    border-left: 3px solid rgba(147, 51, 234, 0.6);
+    background: rgba(147, 51, 234, 0.1);
+    border-radius: 4px;
+  }
+}

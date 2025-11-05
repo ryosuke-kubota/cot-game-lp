@@ -1,0 +1,61 @@
+#cotx-related-links {
+  .link-category {
+    margin-bottom: 3rem;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+
+    &:hover {
+      border-color: rgba(147, 51, 234, 0.8);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
+
+      .link-icon {
+        opacity: 1;
+        transform: translate(5px, -5px);
+      }
+    }
+
+    .link-label {
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .link-icon {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .company-info {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-top: 3rem;
+  }
+}

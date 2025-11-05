@@ -6,6 +6,7 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://lp.cosplay-games.com'),
   title: 'Cosplay Battles',
   description:
     'Cosplay Battles is a blockchain-based platform featuring competitive cosplay battles, gacha systems, and exciting gameplay. Join the community and compete!',

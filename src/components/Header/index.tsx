@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import BorderButton from '../Buttons/BorderButton';
 import './style.scss';
 import { Discord, Telegram, Twitter } from '../Icons';
@@ -15,7 +16,11 @@ export default function Header() {
       className="mx-auto px-4 flex justify-between items-center py-2 fixed w-full"
     >
       <div className="text-whtie font-bold text-xl">
-        <h1>{t('cosplay_battles')}</h1>
+        <Link href="/">
+          <h1 className="cursor-pointer hover:opacity-80 transition-opacity">
+            {t('cosplay_battles')}
+          </h1>
+        </Link>
       </div>
       <div className="flex items-center space-x-4">
         <div className="language-switcher flex gap-2">

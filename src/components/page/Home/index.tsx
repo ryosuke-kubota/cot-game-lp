@@ -19,6 +19,7 @@ import Topics from '@/components/Topics';
 import SNS from '@/components/SNS';
 import BasePathProvider from '@/components/BasePathProvider';
 import FloatingTelegramButton from '@/components/FloatingTelegramButton';
+import CotxBanner from '@/components/CotxBanner';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <CotxBanner />
         {/* <Topics /> */}
         <About />
         <GameRules />

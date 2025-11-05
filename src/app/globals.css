@@ -72,3 +72,18 @@ body {
 .overflow-x-auto {
   -webkit-overflow-scrolling: touch;
 }
+
+/* COTX Page Parallax Background */
+.cotx-page {
+  background-image: url('/assets/images/bg/sns-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.cotx-page section {
+  background: none !important;
+  position: relative;
+}
